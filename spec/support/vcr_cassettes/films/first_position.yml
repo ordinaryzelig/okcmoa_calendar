@@ -1,0 +1,344 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://www.okcmoa.com/see/films/first-position/
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      accept:
+      - ! '*/*'
+      user-agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      date:
+      - Wed, 04 Jul 2012 14:59:22 GMT
+      server:
+      - Apache
+      x-pingback:
+      - http://www.okcmoa.com/xmlrpc.php
+      vary:
+      - Accept-Encoding
+      transfer-encoding:
+      - chunked
+      content-type:
+      - text/html; charset=UTF-8
+    body:
+      encoding: ASCII-8BIT
+      string: ! "<!DOCTYPE html>\n<html dir=\"ltr\" lang=\"en\">\n\n<head>\n\n\t<!--
+        The Title -->\n\t<title>  First Position :: Oklahoma City Museum of Art</title>\n\n\t<link
+        rel=\"icon\" type=\"image/x-icon\" href=\"http://www.okcmoa.com/wp-content/themes/BuilderChild-Blueprint/images/favicon.ico\"
+        />\n\n<!--The Meta Info-->\n<meta http-equiv=\"Content-Type\" content=\"text/html;
+        charset=UTF-8\" />\n\n<!--The Stylesheets-->\n\t<link rel=\"stylesheet\" href=\"http://www.okcmoa.com/wp-content/themes/Builder/css/reset.css\"
+        type=\"text/css\" media=\"screen\" />\n\t<link rel=\"stylesheet\" href=\"http://www.okcmoa.com/wp-content/themes/BuilderChild-Blueprint/style.css\"
+        type=\"text/css\" media=\"screen\" />\n\t<link rel=\"stylesheet\" href=\"http://www.okcmoa.com/wp-content/themes/Builder/css/structure.css\"
+        type=\"text/css\" media=\"screen\" />\n\t<!--<link href='http://fonts.googleapis.com/css?family=Droid+Serif'
+        rel='stylesheet' type='text/css'>-->\n<!--[if lte IE 7]>\n\t<link rel=\"stylesheet\"
+        href=\"http://www.okcmoa.com/wp-content/themes/BuilderChild-Blueprint/css/lte-ie7.css\"
+        type=\"text/css\" media=\"screen\" />\n<![endif]-->\n<!--[if lt IE 7]>\n\t<link
+        rel=\"stylesheet\" href=\"http://www.okcmoa.com/wp-content/themes/BuilderChild-Blueprint/css/lt-ie7.css\"
+        type=\"text/css\" media=\"screen\" />\n\t<script src=\"http://www.okcmoa.com/wp-content/themes/Builder/js/dropdown.js\"
+        type=\"text/javascript\"></script>\n<![endif]-->\n\t\n<!--The RSS and Pingback-->\n<link
+        rel=\"alternate\" type=\"application/rss+xml\" title=\"Oklahoma City Museum
+        of Art RSS Feed\" href=\"http://www.okcmoa.com/feed/\" />\n<link rel=\"pingback\"
+        href=\"http://www.okcmoa.com/xmlrpc.php\" />\n\n\n<link rel=\"alternate\"
+        type=\"application/rss+xml\" title=\"Oklahoma City Museum of Art &raquo; Feed\"
+        href=\"http://www.okcmoa.com/feed/\" />\n<link rel=\"alternate\" type=\"application/rss+xml\"
+        title=\"Oklahoma City Museum of Art &raquo; Comments Feed\" href=\"http://www.okcmoa.com/comments/feed/\"
+        />\n<link rel='stylesheet' id='NextGEN-css'  href='http://www.okcmoa.com/wp-content/plugins/nextgen-gallery/css/nggallery.css?ver=1.0.0'
+        type='text/css' media='screen' />\n<link rel='stylesheet' id='ithemes_feedburner_widget-theme-options-css'
+        \ href='http://www.okcmoa.com/wp-content/themes/Builder/lib/feedburner-widget/css/style.css.php?ver=3.3.1'
+        type='text/css' media='all' />\n<link rel='stylesheet' id='contact-form-7-css'
+        \ href='http://www.okcmoa.com/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=3.2'
+        type='text/css' media='all' />\n<link rel='stylesheet' id='BusinessHoursStyle-css'
+        \ href='http://www.okcmoa.com/wp-content/plugins/business-hours-plugin/style.css?ver=3.3.1'
+        type='text/css' media='all' />\n<script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js?ver=3.3.1'></script>\n<script
+        type='text/javascript' src='http://www.okcmoa.com/wp-content/plugins/nextgen-gallery/js/jquery.cycle.all.min.js?ver=2.9995'></script>\n<script
+        type='text/javascript' src='http://www.okcmoa.com/wp-content/plugins/nextgen-gallery/js/ngg.slideshow.min.js?ver=1.06'></script>\n<script
+        type='text/javascript' src='http://www.okcmoa.com/wp-includes/js/comment-reply.js?ver=20090102'></script>\n<script
+        type='text/javascript' src='http://www.okcmoa.com/wp-content/plugins/business-hours-plugin/script.js?ver=3.3.1'></script>\n<script
+        type='text/javascript' src='http://www.okcmoa.com/wp-content/plugins/mm-forms-community/js/mm-forms.js?ver=3.3.1'></script>\n<script
+        type='text/javascript' src='http://www.okcmoa.com/wp-content/plugins/mm-forms-community/js/ajaxfileupload.js?ver=3.3.1'></script>\n<script
+        type='text/javascript' src='http://www.okcmoa.com/wp-content/plugins/mm-forms-community/js/calendar.js?ver=3.3.1'></script>\n<link
+        rel=\"EditURI\" type=\"application/rsd+xml\" title=\"RSD\" href=\"http://www.okcmoa.com/xmlrpc.php?rsd\"
+        />\n<link rel=\"wlwmanifest\" type=\"application/wlwmanifest+xml\" href=\"http://www.okcmoa.com/wp-includes/wlwmanifest.xml\"
+        /> \n<link rel='prev' title='2012 French Cinema Week: Polisse' href='http://www.okcmoa.com/see/films/2012-french-cinema-week-polisse/'
+        />\n<meta name=\"generator\" content=\"WordPress 3.3.1\" />\n<link rel='canonical'
+        href='http://www.okcmoa.com/see/films/first-position/' />\n<link rel=\"stylesheet\"
+        href=\"http://www.okcmoa.com/wp-content/plugins/mm-forms-community/css/stylesheet.css\"
+        type=\"text/css\" />\n<link rel=\"stylesheet\" href=\"http://www.okcmoa.com/wp-content/plugins/mm-forms-community/css/calendar.css\"
+        type=\"text/css\" />\n<!-- <meta name=\"NextGEN\" version=\"1.9.3\" /> -->\n<link
+        rel=\"stylesheet\" href=\"http://www.okcmoa.com/wp-content/plugins/slimbox-plugin/slimbox/slimbox.css\"
+        type=\"text/css\" media=\"screen\" />\n<script type=\"text/javascript\" src=\"http://www.okcmoa.com/wp-content/plugins/slimbox-plugin/slimbox/mootools.x.js\"></script>\n<script
+        type=\"text/javascript\" src=\"http://www.okcmoa.com/wp-content/plugins/slimbox-plugin/slimbox/slimbox.js\"></script>\n<style
+        type=\"text/css\" media=\"screen\">\r\n\r\n/* The Recent Posts Container.
+        */\r\ndiv.srp-widget-container {\r\n\tdisplay : table;\r\n\tclear   : both;\r\n}\r\n\r\n/*
+        The Widget Title. */\r\ndiv.srp-widget-container h3.widget-title{\r\n\tdisplay
+        \      : table-caption;\r\n\tmargin-bottom : 10px;\r\n}\r\n\r\n/* Single post
+        entry box. */\r\ndiv.srp-widget-singlepost {\r\n\tpadding       : 0px 0px
+        10px 0px;\r\n\tmargin        : 0px 0px 10px 0px;\r\n\tborder-bottom : 1px
+        solid #CCCCCC;\r\n}\r\n\r\n/* The thumbnail box. */\r\ndiv.srp-thumbnail-box
+        {\r\n\tdisplay        : table-cell;\r\n\tvertical-align : top;\r\n\tpadding-right
+        \ : 10px;\r\n}\r\n\r\n/* The content stuff box. */\r\ndiv.srp-content-box
+        {\r\n\tdisplay        : table-cell;\r\n\tvertical-align : top;\r\n}\r\n\r\n/*
+        The excerpt. */\r\np.srp-widget-excerpt {\r\n\tmargin: 0px;\r\n}\r\n\r\n/*
+        Single post title. */\r\nh4.srp-widget-title {}\r\n\r\n/* Single post title
+        link. */\r\na.srp-widget-title-link {}\r\n\r\n/* Thumbnail link. */\r\na.srp-widget-thmblink
+        {}\r\n\r\n/* Thumbnail image. */\r\nimg.srp-widget-thmb {}\r\n\r\n/* The post
+        date box. */\r\nspan.srp-widget-date {}\r\n\r\n/* Stringbreak link. */\r\na.srp-widget-stringbreak-link
+        {}\r\n\r\n/* Stringbreak link image. */\r\na.srp-widget-stringbreak-link-image
+        {}\r\n\r\n/* Stringbreak. */\r\nspan.srp-widget-stringbreak {}\r\n</style><!--[if
+        IE 7]><link rel='stylesheet' id='css-ie-fix' href='http://www.okcmoa.com/wp-content/plugins/special-recent-posts/css/css-ie-fix.css'
+        type='text/css' media='all' /> <![endif]--><style type=\"text/css\">.broken_link,
+        a.broken_link {\r\n\ttext-decoration: line-through;\r\n}</style>\n</head>\n<body
+        class=\"builder-template-page builder-view-page builder-view-page-10557 page
+        page-id-10557 page-child parent-pageid-44 page-template-default page-first-position
+        unknown-os unknown-browser\" id=\"builder-layout-4dd3495f9a257\">\n<div class=\"builder-container-outer-wrapper\">\n<div
+        class=\"builder-container builder-view-page\" id=\"builder-container-4dd3495f9a257\">\n<div
+        class=\"builder-module-outer-wrapper builder-module-html-outer-wrapper\" style=\"padding:0;
+        margin:0 auto; display:block; clear:both; overflow:visible;\">\n<div class=\"builder-module
+        builder-module-html builder-module-1 builder-module-html-1 builder-module-top
+        builder-module-html-last builder-module-before-content clearfix\" id=\"builder-module-4dd3495f9a2a7\"
+        style=\"width:960px; margin:0 auto;\">\n<div class=\"builder-module-block-outer-wrapper
+        builder-module-element-outer-wrapper single clearfix\" style=\"width:960px;
+        max-width:960px; overflow:hidden; padding:0; margin:0\">\n<div class=\"builder-module-block
+        builder-module-element clearfix\">\n<div id=\"logo\">\r\n\t<a href=\"http://www.okcmoa.com\"><img
+        alt=\"Home\" width =\"224\" height=\"66\" src=\"http://www.okcmoa.com/wp-content/themes/BuilderChild-Blueprint/images/bg-h1.png\"
+        /></a>\r\n</div>\r\n\r\n<div class=\"builder-module-navigation\"> \r\n\t<ul
+        class=\"menu\">\r\n\t\t<li class=\"page_item page-item-2\"><a href=\"http://www.okcmoa.com/visit/\">Visit</a>\n<ul
+        class='children'>\n\t<li class=\"page_item page-item-26\"><a href=\"http://www.okcmoa.com/visit/hours-admissions/\">Hours
+        &#038; Admissions</a></li>\n\t<li class=\"page_item page-item-28\"><a href=\"http://www.okcmoa.com/visit/map-directions-parking/\">Map,
+        Directions &#038; Parking</a></li>\n\t<li class=\"page_item page-item-30\"><a
+        href=\"http://www.okcmoa.com/visit/visitor-information/\">Visitor Information</a>\n\t<ul
+        class='children'>\n\t\t<li class=\"page_item page-item-434\"><a href=\"http://www.okcmoa.com/visit/visitor-information/photography-policy/\">Photography
+        Policy</a></li>\n\t</ul>\n</li>\n\t<li class=\"page_item page-item-32\"><a
+        href=\"http://www.okcmoa.com/visit/special-needs/\">Special Needs</a></li>\n\t<li
+        class=\"page_item page-item-34\"><a href=\"http://www.okcmoa.com/visit/facility-rentals/\">Facility
+        Rentals</a>\n\t<ul class='children'>\n\t\t<li class=\"page_item page-item-210\"><a
+        href=\"http://www.okcmoa.com/visit/facility-rentals/classrooms/\">Classrooms</a></li>\n\t\t<li
+        class=\"page_item page-item-221\"><a href=\"http://www.okcmoa.com/visit/facility-rentals/conference-room/\">Conference
+        Room</a></li>\n\t\t<li class=\"page_item page-item-241\"><a href=\"http://www.okcmoa.com/visit/facility-rentals/galleries/\">Galleries</a></li>\n\t\t<li
+        class=\"page_item page-item-248\"><a href=\"http://www.okcmoa.com/visit/facility-rentals/lobby/\">Lobby</a></li>\n\t\t<li
+        class=\"page_item page-item-253\"><a href=\"http://www.okcmoa.com/visit/facility-rentals/museum-cafe/\">Museum
+        Cafe</a></li>\n\t\t<li class=\"page_item page-item-262\"><a href=\"http://www.okcmoa.com/visit/facility-rentals/noble-theater/\">Noble
+        Theater</a></li>\n\t\t<li class=\"page_item page-item-275\"><a href=\"http://www.okcmoa.com/visit/facility-rentals/roof-terrace/\">Roof
+        Terrace</a></li>\n\t\t<li class=\"page_item page-item-282\"><a href=\"http://www.okcmoa.com/visit/facility-rentals/theater-lobby/\">Theater
+        Lobby</a></li>\n\t\t<li class=\"page_item page-item-295\"><a href=\"http://www.okcmoa.com/visit/facility-rentals/the-mezz-dining/\">The
+        Mezz Dining</a></li>\n\t\t<li class=\"page_item page-item-315\"><a href=\"http://www.okcmoa.com/visit/facility-rentals/rental-policies/\">Rental
+        Policies</a></li>\n\t</ul>\n</li>\n\t<li class=\"page_item page-item-36\"><a
+        href=\"http://www.okcmoa.com/visit/tours/\">Tours</a>\n\t<ul class='children'>\n\t\t<li
+        class=\"page_item page-item-1295\"><a href=\"http://www.okcmoa.com/visit/tours/group-tours/\">Group
+        Tours</a></li>\n\t\t<li class=\"page_item page-item-1299\"><a href=\"http://www.okcmoa.com/visit/tours/1299-2/\">School
+        Tours</a></li>\n\t</ul>\n</li>\n\t<li class=\"page_item page-item-3542\"><a
+        href=\"http://www.okcmoa.com/visit/blue-star-museums/\">Blue Star Museums</a></li>\n</ul>\n</li>\n<li
+        class=\"page_item page-item-6 current_page_ancestor\"><a href=\"http://www.okcmoa.com/see/\">See</a>\n<ul
+        class='children'>\n\t<li class=\"page_item page-item-40\"><a href=\"http://www.okcmoa.com/see/exhibitions/\">Exhibitions</a>\n\t<ul
+        class='children'>\n\t\t<li class=\"page_item page-item-129\"><a href=\"http://www.okcmoa.com/see/exhibitions/current-exhibitions/\">Current
+        Exhibitions</a></li>\n\t\t<li class=\"page_item page-item-1110\"><a href=\"http://www.okcmoa.com/see/exhibitions/upcoming-exhibitions/\">Upcoming
+        Exhibitions</a></li>\n\t\t<li class=\"page_item page-item-183\"><a href=\"http://www.okcmoa.com/see/exhibitions/past-exhibitions/\">Past
+        Exhibitions</a></li>\n\t\t<li class=\"page_item page-item-3751\"><a href=\"http://www.okcmoa.com/see/exhibitions/traveling-exhibitions/\">Traveling
+        Exhibitions</a></li>\n\t</ul>\n</li>\n\t<li class=\"page_item page-item-42\"><a
+        href=\"http://www.okcmoa.com/see/collections/\">Collections</a>\n\t<ul class='children'>\n\t\t<li
+        class=\"page_item page-item-1085\"><a href=\"http://www.okcmoa.com/see/collections/american-art/\">American
+        Art</a></li>\n\t\t<li class=\"page_item page-item-1091\"><a href=\"http://www.okcmoa.com/see/collections/european-art/\">European
+        Art</a></li>\n\t\t<li class=\"page_item page-item-1097\"><a href=\"http://www.okcmoa.com/see/collections/post-war-and-contemporary-art/\">Post-War
+        and Contemporary Art</a></li>\n\t\t<li class=\"page_item page-item-1100\"><a
+        href=\"http://www.okcmoa.com/see/collections/drawings-and-prints/\">Drawings
+        and Prints</a></li>\n\t\t<li class=\"page_item page-item-1103\"><a href=\"http://www.okcmoa.com/see/collections/photography/\">Photography</a></li>\n\t\t<li
+        class=\"page_item page-item-1106\"><a href=\"http://www.okcmoa.com/see/collections/dale-chihuly-glass/\">Dale
+        Chihuly Glass</a></li>\n\t</ul>\n</li>\n\t<li class=\"page_item page-item-44
+        current_page_ancestor current_page_parent\"><a href=\"http://www.okcmoa.com/see/films/\">Films</a>\n\t<ul
+        class='children'>\n\t\t<li class=\"page_item page-item-1432\"><a href=\"http://www.okcmoa.com/see/films/theater-film-faq/\">Noble
+        Theater FAQ</a></li>\n\t\t<li class=\"page_item page-item-1420\"><a href=\"http://www.okcmoa.com/see/films/about-the-film-program/\">About
+        the Film Program</a></li>\n\t</ul>\n</li>\n\t<li class=\"page_item page-item-7943\"><a
+        href=\"http://www.okcmoa.com/see/projectscreen/\">projectscreen</a></li>\n</ul>\n</li>\n<li
+        class=\"page_item page-item-9\"><a href=\"http://www.okcmoa.com/learn/\">Learn</a>\n<ul
+        class='children'>\n\t<li class=\"page_item page-item-47\"><a href=\"http://www.okcmoa.com/learn/classes-camps/\">Classes
+        &#038; Camps</a>\n\t<ul class='children'>\n\t\t<li class=\"page_item page-item-343\"><a
+        href=\"http://www.okcmoa.com/learn/classes-camps/adult-classes-workshops/\">Adult
+        Classes &#038; Workshops</a></li>\n\t\t<li class=\"page_item page-item-416\"><a
+        href=\"http://www.okcmoa.com/learn/classes-camps/childrens-classes-workshops/\">Youth
+        Classes &#038; Workshops</a></li>\n\t\t<li class=\"page_item page-item-411\"><a
+        href=\"http://www.okcmoa.com/learn/classes-camps/instructors/\">Instructors</a></li>\n\t\t<li
+        class=\"page_item page-item-414\"><a href=\"http://www.okcmoa.com/learn/classes-camps/registration-information/\">How
+        to Enroll</a></li>\n\t</ul>\n</li>\n\t<li class=\"page_item page-item-49\"><a
+        href=\"http://www.okcmoa.com/learn/programs/\">Public Programs</a>\n\t<ul
+        class='children'>\n\t\t<li class=\"page_item page-item-901\"><a href=\"http://www.okcmoa.com/learn/programs/adult/\">Adult
+        Programs</a></li>\n\t\t<li class=\"page_item page-item-905\"><a href=\"http://www.okcmoa.com/learn/programs/family/\">Family
+        Programs</a></li>\n\t\t<li class=\"page_item page-item-913\"><a href=\"http://www.okcmoa.com/learn/programs/community-outreach/\">Community
+        Outreach</a></li>\n\t\t<li class=\"page_item page-item-916\"><a href=\"http://www.okcmoa.com/learn/programs/youth-arts-advocates/\">Youth
+        Arts Advocates</a></li>\n\t</ul>\n</li>\n\t<li class=\"page_item page-item-354\"><a
+        href=\"http://www.okcmoa.com/learn/tours-resources/\">Tours and Resources</a>\n\t<ul
+        class='children'>\n\t\t<li class=\"page_item page-item-956\"><a href=\"http://www.okcmoa.com/learn/tours-resources/grouptours/\">Tours</a></li>\n\t\t<li
+        class=\"page_item page-item-959\"><a href=\"http://www.okcmoa.com/learn/tours-resources/k-12-teachers-students/\">K-12
+        Teachers &#038; Students</a></li>\n\t\t<li class=\"page_item page-item-962\"><a
+        href=\"http://www.okcmoa.com/learn/tours-resources/college-faculty-student/\">College
+        Students</a></li>\n\t\t<li class=\"page_item page-item-965\"><a href=\"http://www.okcmoa.com/learn/tours-resources/docents/\">Docents</a></li>\n\t\t<li
+        class=\"page_item page-item-9464\"><a href=\"http://www.okcmoa.com/learn/tours-resources/classroom-kits/\">Classroom
+        Kits</a></li>\n\t</ul>\n</li>\n</ul>\n</li>\n<li class=\"page_item page-item-11\"><a
+        href=\"http://www.okcmoa.com/connect/\">Connect</a>\n<ul class='children'>\n\t<li
+        class=\"page_item page-item-51\"><a href=\"http://www.okcmoa.com/connect/calendar/\">Calendar</a>\n\t<ul
+        class='children'>\n\t\t<li class=\"page_item page-item-718\"><a href=\"http://www.okcmoa.com/connect/calendar/weekly-newsletter/\">Weekly
+        Newsletter</a></li>\n\t</ul>\n</li>\n\t<li class=\"page_item page-item-53\"><a
+        href=\"http://www.okcmoa.com/connect/about-okcmoa/\">About OKCMOA</a>\n\t<ul
+        class='children'>\n\t\t<li class=\"page_item page-item-1230\"><a href=\"http://www.okcmoa.com/connect/about-okcmoa/faq/\">FAQ</a></li>\n\t\t<li
+        class=\"page_item page-item-729\"><a href=\"http://www.okcmoa.com/connect/about-okcmoa/museum-history/\">Museum
+        History</a></li>\n\t\t<li class=\"page_item page-item-1235\"><a href=\"http://www.okcmoa.com/connect/about-okcmoa/feedback/\">Feedback</a></li>\n\t</ul>\n</li>\n\t<li
+        class=\"page_item page-item-721\"><a href=\"http://www.okcmoa.com/connect/contact-us/\">Contact
+        Us</a></li>\n\t<li class=\"page_item page-item-723\"><a href=\"http://www.okcmoa.com/newsroom/\"
+        target=\"_blank\">Newsroom</a></li>\n\t<li class=\"page_item page-item-732\"><a
+        href=\"http://www.okcmoa.com/connect/publications/\">Publications</a>\n\t<ul
+        class='children'>\n\t\t<li class=\"page_item page-item-735\"><a href=\"http://www.okcmoa.com/connect/publications/catalogues-and-books/\">Catalogues
+        and Books</a></li>\n\t\t<li class=\"page_item page-item-738\"><a href=\"http://www.okcmoa.com/connect/publications/members-magazine/\">Members&#8217;
+        Magazine</a></li>\n\t\t<li class=\"page_item page-item-741\"><a href=\"http://www.okcmoa.com/connect/publications/annual-reports/\">Annual
+        Reports</a></li>\n\t</ul>\n</li>\n\t<li class=\"page_item page-item-744\"><a
+        href=\"http://www.okcmoa.com/connect/employment/\">Employment</a></li>\n\t<li
+        class=\"page_item page-item-746\"><a href=\"http://www.okcmoa.com/connect/board-of-trustees/\">Board
+        of Trustees</a></li>\n\t<li class=\"page_item page-item-748\"><a href=\"http://www.okcmoa.com/connect/museum-staff/\">Museum
+        Staff</a></li>\n\t<li class=\"page_item page-item-752\"><a href=\"http://www.okcmoa.com/connect/image-galleries/\">Image
+        Galleries</a></li>\n\t<li class=\"page_item page-item-1356\"><a href=\"http://www.okcmoa.com/connect/museum-blog/\">Museum
+        Blog</a></li>\n\t<li class=\"page_item page-item-8147\"><a href=\"http://www.okcmoa.com/connect/okcmoa-10th-anniversary/\">OKCMOA
+        10th Anniversary</a></li>\n\t<li class=\"page_item page-item-8376\"><a href=\"http://www.okcmoa.com/connect/internships/\">Internships</a></li>\n</ul>\n</li>\n<li
+        class=\"page_item page-item-13\"><a href=\"http://www.okcmoa.com/support/\">Support</a>\n<ul
+        class='children'>\n\t<li class=\"page_item page-item-55\"><a href=\"http://www.okcmoa.com/support/membership/\">Membership</a>\n\t<ul
+        class='children'>\n\t\t<li class=\"page_item page-item-1759\"><a href=\"http://www.okcmoa.com/support/membership/green-members/\">Green
+        Members</a></li>\n\t\t<li class=\"page_item page-item-689\"><a href=\"http://www.okcmoa.com/support/membership/gift-membership/\">Gift
+        Membership</a></li>\n\t</ul>\n</li>\n\t<li class=\"page_item page-item-57\"><a
+        href=\"http://www.okcmoa.com/support/annual-fund-giving/\">Annual Fund Giving</a></li>\n\t<li
+        class=\"page_item page-item-3501\"><a href=\"http://www.okcmoa.com/support/memorial-gifts/\">Memorial
+        Gifts</a></li>\n\t<li class=\"page_item page-item-697\"><a href=\"http://www.gftpln.org/Home.do?orgId=5504\">Planned
+        Giving</a></li>\n\t<li class=\"page_item page-item-687\"><a href=\"http://www.okcmoa.com/support/fundraising-events/\">Fundraising
+        Events</a>\n\t<ul class='children'>\n\t\t<li class=\"page_item page-item-705\"><a
+        href=\"http://www.okcmoa.com/support/fundraising-events/renaissance-ball/\">Renaissance
+        Ball</a></li>\n\t\t<li class=\"page_item page-item-709\"><a href=\"http://www.okcmoa.com/support/fundraising-events/art-on-tap/\">ARTonTAP</a></li>\n\t\t<li
+        class=\"page_item page-item-711\"><a href=\"http://www.okcmoa.com/support/fundraising-events/omelette-party/\">29th
+        Omelette Party</a></li>\n\t</ul>\n</li>\n\t<li class=\"page_item page-item-715\"><a
+        href=\"http://www.okcmoa.com/support/sponsors/\">Sponsors</a></li>\n</ul>\n</li>\n<li
+        class=\"page_item page-item-15\"><a href=\"http://www.okcmoa.com/eat/\">Eat</a>\n<ul
+        class='children'>\n\t<li class=\"page_item page-item-59\"><a href=\"http://www.okcmoa.com/eat/menus/\">Menus</a>\n\t<ul
+        class='children'>\n\t\t<li class=\"page_item page-item-583\"><a href=\"http://www.okcmoa.com/eat/menus/lunch/\">Lunch</a></li>\n\t\t<li
+        class=\"page_item page-item-586\"><a href=\"http://www.okcmoa.com/eat/menus/lunch-specials/\">Lunch
+        Specials</a></li>\n\t\t<li class=\"page_item page-item-593\"><a href=\"http://www.okcmoa.com/eat/menus/kids-menu/\">Kids
+        Menu</a></li>\n\t\t<li class=\"page_item page-item-595\"><a href=\"http://www.okcmoa.com/eat/menus/dinner/\">Dinner</a></li>\n\t\t<li
+        class=\"page_item page-item-597\"><a href=\"http://www.okcmoa.com/eat/menus/desserts/\">Desserts</a></li>\n\t\t<li
+        class=\"page_item page-item-603\"><a href=\"http://www.okcmoa.com/eat/menus/sunday-brunch/\">Sunday
+        Brunch</a></li>\n\t\t<li class=\"page_item page-item-647\"><a href=\"http://www.okcmoa.com/eat/menus/wine-menu/\">Wine
+        Menu</a></li>\n\t\t<li class=\"page_item page-item-652\"><a href=\"http://www.okcmoa.com/eat/menus/museum-cafe-tea/\">Museum
+        Cafe Tea</a></li>\n\t</ul>\n</li>\n\t<li class=\"page_item page-item-566\"><a
+        href=\"http://www.okcmoa.com/eat/museum-cafe-catering/\">Museum Cafe Catering</a></li>\n\t<li
+        class=\"page_item page-item-576\"><a href=\"http://www.okcmoa.com/eat/cocktails-on-the-skyline/\">Cocktails
+        on the Skyline</a></li>\n\t<li class=\"page_item page-item-600\"><a href=\"http://www.okcmoa.com/eat/dinner-and-movie/\">Dinner
+        and a Movie</a></li>\n\t<li class=\"page_item page-item-5789\"><a href=\"http://www.okcmoa.com/eat/museum-cafe-event-gallery/\">Museum
+        Cafe Event Gallery</a></li>\n</ul>\n</li>\n<li class=\"page_item page-item-17\"><a
+        href=\"http://shop.okcmoa.com/\">Shop</a></li>\n \r\n\t</ul>\r\n</div>    \n</div>\n</div>\n\n</div>\n</div>\n<div
+        class=\"builder-module-outer-wrapper builder-module-content-outer-wrapper\"
+        style=\"padding:0; margin:0 auto; display:block; clear:both; overflow:visible;\">\n<div
+        class=\"builder-module builder-module-content builder-module-2 builder-module-content-1
+        builder-module-middle builder-module-content-last builder-module-before-footer
+        builder-module-after-html clearfix\" id=\"builder-module-4dd3495f9a2e1\" style=\"width:960px;
+        margin:0 auto;\">\n<div class=\"builder-module-block-outer-wrapper builder-module-sidebar-outer-wrapper
+        left clearfix\" style=\"width:220px; max-width:220px; overflow:hidden; padding:0;
+        margin:0;\">\n<div class=\"builder-module-block builder-module-sidebar builder-module-sidebar-1-left
+        builder-module-sidebar-with-element sidebar left clearfix\">\n<div class=\"widget-wrapper
+        widget-wrapper-single single widget-wrapper-1\">\n<div class=\"widget widget-1
+        widget-top widget_text\" id=\"text-6\">\t\t\t<div class=\"textwidget\"><a
+        href=\"http://www.okcmoa.com/see/films/\"><img class=\"alignnone size-full
+        wp-image-1466\" title=\"Button_Back_to_Films\" src=\"http://www.okcmoa.com/wp-content/uploads/2011/05/Button_Back_to_Films.png\"
+        alt=\"Back to main Films Page\" width=\"165\" height=\"36\" /></a></div>\n\t\t</div><div
+        class=\"widget widget-2 widget-middle widget_text\" id=\"text-20\"><h4 class=\"widget-title\">FILMS</h4>\t\t\t<div
+        class=\"textwidget\"><ul>\r\n\t<li><a href=\"http://www.okcmoa.com/see/films/\">Current
+        Films</a></li>\r\n\t<li><a href=\"http://www.okcmoa.com/see/films/theater-film-faq/\">Noble
+        Theater FAQ</a></li>\t\r\n<li><a href=\"http://www.okcmoa.com/see/films/about-the-film-program/\">About
+        the Film Program</a></li>\r\n</ul></div>\n\t\t</div><div class=\"widget widget-3
+        widget-bottom widget_text\" id=\"text-7\"><h4 class=\"widget-title\">Film
+        Admission</h4>\t\t\t<div class=\"textwidget\"><p>Adults: $8<br />\nSeniors
+        62+: $6<br />\nCollege Students w/ID: $6<br />\nMembers: $5</p>\n<p><a href=\"https://tickets.okcmoa.com/public/\"
+        target=\"_blank\"><img class=\"alignnone size-full wp-image-1480\" title=\"Buttons_Tickets_HD_Small\"
+        src=\"http://www.okcmoa.com/wp-content/uploads/2011/05/Buttons_Tickets_HD_Small.png\"
+        alt=\"Tickets\" width=\"99\" height=\"28\" /></a></p>\n</div>\n\t\t</div></div>\n\n</div>\n</div>\n<div
+        class=\"builder-module-block-outer-wrapper builder-module-element-outer-wrapper
+        right clearfix\" style=\"width:740px; max-width:740px; overflow:hidden; padding:0;
+        margin:0\">\n<div class=\"builder-module-block builder-module-element clearfix\">\n\t\t\t\t\t\t\t\t\t\n\t\t\t<div
+        class=\"post-10557 page type-page status-publish hentry\">\n\t\t\t\t<!-- title,
+        meta, and date info -->\n\t\t\t\t<div class=\"title clearfix\">\n\t\t\t\t\t<div
+        class=\"post-title\">\n\t\t\t\t\t\t<h1 id=\"post-10557\">First Position</h1>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t\n\t\t\t\t<!--
+        post content -->\n\t\t\t\t<div class=\"post-content\">\n\t\t\t\t\t<ul>\n<li>Thursday,
+        July 5, 7:30pm<img class=\"alignright size-medium wp-image-10558\" title=\"First
+        Position poster\" src=\"http://www.okcmoa.com/wp-content/uploads/2012/06/First-Position-poster-202x300.jpg\"
+        alt=\"\" width=\"202\" height=\"300\" /></li>\n<li>Friday &amp; Saturday,
+        July 6-7, 5:30pm &amp; 8pm</li>\n<li>Sunday, July 8, 2pm</li>\n</ul>\n<p>For
+        the young dancers at the Youth America Grand Prix, one of the world&#8217;s
+        most prestigious ballet competitions, lifelong dreams are at stake. With hundreds
+        competing for a handful of elite scholarships and contracts, practice and
+        discipline are paramount, and nothing short of perfection is expected. Bess
+        Kargman&#8217;s award-winning documentary, <em>First Position</em>, follows
+        six young dancers as they prepare for a chance to enter the world of professional
+        ballet, struggling through bloodied feet, near exhaustion and debilitating
+        injuries all while navigating the drama of adolescence. A showcase of awe-inspiring
+        talent, tenacity and passion, <em>First Position</em> paints a thrilling and
+        moving portrait of the most gifted young ballet stars of tomorrow.</p>\n<p>Director:
+        Bess Kargman 2011 USA 94min. NR 35mm</p>\n<p><iframe width=\"500\" height=\"281\"
+        src=\"http://www.youtube.com/embed/SmiBXdBNIXE?fs=1&#038;feature=oembed\"
+        frameborder=\"0\" allowfullscreen></iframe></p>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t</div>\n\t\t\t<!--
+        end .post -->\n\t\t\t\n\t\t\t\t\t\t\t\n\t\t<!-- Previous/Next page navigation
+        -->\n\t\t<div class=\"paging clearfix\">\n\t\t\t<div class=\"alignleft\"></div>\n\t\t\t<div
+        class=\"alignright\"></div>\n\t\t</div>\n\t\n</div>\n</div>\n\n</div>\n</div>\n<div
+        class=\"builder-module-outer-wrapper builder-module-footer-outer-wrapper\"
+        style=\"padding:0; margin:0 auto; display:block; clear:both; overflow:visible;\">\n<div
+        class=\"builder-module builder-module-footer builder-module-3 builder-module-footer-1
+        builder-module-bottom builder-module-last builder-module-footer-last builder-module-after-content
+        clearfix\" id=\"builder-module-4dd3495f9a31b\" style=\"width:960px; margin:0
+        auto;\">\n<div class=\"builder-module-block-outer-wrapper builder-module-element-outer-wrapper
+        single clearfix\" style=\"width:960px; max-width:960px; overflow:hidden; padding:0;
+        margin:0\">\n<div class=\"builder-module-block builder-module-element clearfix\">\n\t\r\n\t\t\t<div
+        id=\"footer\">\r\n\t        \t<div id=\"footerContent\">\r\n\t            \t<div
+        id=\"footerPrimary\">\r\n\t                    <dl id=\"contactList\">\r\n\t
+        \                       <dt>Contact Us</dt>\r\n\t                        <dd><span><span
+        title=\"Address\" class=\"red\">A:</span>  415 Couch Drive, Oklahoma City,
+        OK 73102</span></dd>\r\n\t                        <dd><span><span title=\"Phone\"
+        class=\"red\">P:</span>  (405) 236-3100</span></dd>\r\n\t                        <dd><span><span
+        title=\"E-Mail\" class=\"red\">E:</span>  <a href=\"mailto:info@okcmoa.com\">info@okcmoa.com</a></span></dd>\r\n\t
+        \                   </dl>  \r\n\t\t\t\t\t\t<p>&copy; Copyright 2012 <a href=\"/index.php\">Oklahoma
+        City Museum of Art.</a> All rights reserved.</p>\r\n\t\t\t\t\t\t<p><a href=\"http://okcmoa.com/connect/about-okcmoa/privacy-terms-of-use/\">Privacy
+        &amp; Terms of Use</a></p>\r\n\t                </div>\r\n\t                <div
+        id=\"footerSecondary\">\r\n\t                \t<dl id=\"quickLinks\">\r\n\t
+        \                   \t<dt>Quick Links</dt>\r\n\t                    \t<dd
+        id=\"btn-tickets\"><a href=\"https://tickets.okcmoa.com/public/\">Tickets</a></dd>\r\n\t
+        \                       <dd id=\"btn-donate\"><a href=\"https://tickets.okcmoa.com/public/donation.asp\">Donate</a></dd>\r\n\t
+        \                       <dd id=\"btn-calendar\">\r\n\t\t\t\t    <span id=\"month\">\r\n\t\t\t\t\tJul\t\t\t
+        \           </span>\r\n\t                            <div id=\"day\">\r\n\t\t\t\t\t04\t
+        \                           </div>\r\n\t                            <a href=\"/connect/calendar/\">Calendar</a>\r\n\t
+        \                       </dd>\r\n\t                    </dl>\r\n\t                </div>\r\n\t
+        \               <div id=\"footerTertiary\">\r\n\t                    <dl id=\"networkList\">\r\n\t
+        \                       <dt>Network</dt>\r\n\t                        <dd
+        id=\"btn-facebook\"><a href=\"http://www.facebook.com/pages/Oklahoma-City-OK/Oklahoma-City-Museum-of-Art/59862915146?ref=mf\">Facebook</a></dd>\r\n\t
+        \                       <dd id=\"btn-twitter\"><a href=\"http://twitter.com/okcmoa\">Twitter</a></dd>\r\n\t
+        \                   </dl>\r\n\t                \t<form action=\"http://www.okcmoa.com\"
+        id=\"searchform\" method=\"get\">\r\n\t\t\t\t\t\t\t<input type=\"text\" id=\"s\"
+        name=\"s\" value=\"\">\r\n\t\t\t\t\t\t\t<input type=\"image\" value=\"Search\"
+        id=\"searchsubmit\" src=\"http://www.okcmoa.com/wp-content/themes/BuilderChild-Blueprint/images/btn-search.png\">\r\n\t\t\t\t\t\t</form>\r\n\t\t\t\t\t\t<p><a
+        class=\"light-grey\" href=\"http://webv2.okcmoa.com/faq/\">FAQ</a> | <a href=\"http://okcmoa.com/connect/contact-us/\">Contact
+        Us</a> | <a class=\"light-grey\" href=\"http://okcmoa.com/connect/about-okcmoa/feedback/\">Website
+        Feedback</a></p>\r\n\t                </div>\r\n\t        \t</div>\r\n\t        </div>\r\n\t\r\n\t\r\n<!--
+        tracker added by Ultimate Google Analytics plugin v1.6.0: http://www.oratransplant.nl/uga
+        -->\r\n<script type=\"text/javascript\">\r\nvar gaJsHost = ((\"https:\" ==
+        document.location.protocol) ? \"https://ssl.\" : \"http://www.\");\r\ndocument.write(unescape(\"%3Cscript
+        src='\" + gaJsHost + \"google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E\"));\r\n</script>\r\n<script
+        type=\"text/javascript\">\r\nvar pageTracker = _gat._getTracker(\"UA-3164533-8\");\r\npageTracker._initData();\r\npageTracker._trackPageview();\r\n</script>\r\n<script
+        type='text/javascript' src='http://www.okcmoa.com/wp-content/plugins/contact-form-7/includes/js/jquery.form.js?ver=3.09'></script>\n<script
+        type='text/javascript'>\n/* <![CDATA[ */\nvar _wpcf7 = {\"loaderUrl\":\"http:\\/\\/www.okcmoa.com\\/wp-content\\/plugins\\/contact-form-7\\/images\\/ajax-loader.gif\",\"sending\":\"Sending
+        ...\"};\n/* ]]> */\n</script>\n<script type='text/javascript' src='http://www.okcmoa.com/wp-content/plugins/contact-form-7/includes/js/scripts.js?ver=3.2'></script>\n<!--\nThe
+        template loader logic has chosen a different template than what was used.\n\nChosen
+        Template: /home3/okcmoaco/public_html/wp-content/themes/Builder/page.php\nActual
+        Template: /home3/okcmoaco/public_html/wp-content/themes/BuilderChild-Blueprint/footer.php\n\nThis
+        will usually occur if the template file was overriden using an action on template_redirect.\nThis
+        is a best effort guess to catch such scenarios as mentioned above but can
+        be incorrect.\n-->\n\n</div>\n</div>\n\n</div>\n</div>\n\n</div>\n</div>\n\n</body>\n</html>"
+    http_version: '1.1'
+  recorded_at: Wed, 04 Jul 2012 14:59:23 GMT
+recorded_with: VCR 2.2.2
