@@ -4,7 +4,7 @@ module OKCMOA
     include RailsStyleInitializer
 
     attr_accessor :film
-    attr_accessor :time # DateTime.
+    # time defined manuallyl because of stupid time zone crap.
 
     class << self
 
@@ -30,6 +30,71 @@ module OKCMOA
         end
       end
 
+      def current
+        Film.all.flat_map(&:screenings)
+      end
+
+      def last_import
+        if File.exist?(last_import_path)
+          file = File.open(last_import_path)
+          YAML.load(file.read)
+        else
+          []
+        end
+      end
+
+      def last_import_path
+        './tmp/screenings.yml'
+      end
+
+      def write_last_import(screenings)
+        File.open(last_import_path, 'w') do |f|
+          f.write screenings.to_yaml
+        end
+      end
+
+    end
+
+    # =============================================
+    # Comparison.
+    # Compare film title and screening time.
+
+    def ==(another_screening)
+      self.film.title == another_screening.film.title && self.time == another_screening.time
+    end
+    alias_method :eql?, :==
+
+    def hash
+      quick_add_text.hash
+    end
+
+    # =============================================
+    # UGH, time zones.
+
+    # Strip any time zone crap.
+    def time=(time)
+      t = time.to_time.utc
+      @time = DateTime.civil(t.year, t.month, t.day, t.hour, t.min)
+    end
+
+    def time
+      @time.to_time.utc.to_datetime
+    end
+
+    # =============================================
+
+    def create_event
+      OKCMOA.client.api_client.execute(
+        api_method: OKCMOA.client.service.events.quick_add,
+        parameters: {
+          'calendarId' => OKCMOA.config.films_calendar_id,
+          'text'       => quick_add_text,
+        }
+      )
+    end
+
+    def quick_add_text
+      "#{film.title} on #{time.strftime('%F %R')}"
     end
 
   end

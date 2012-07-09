@@ -1,6 +1,8 @@
 require 'bundler/setup'
 Bundler.require
 
+require './lib/config'
+
 require './lib/crawler'
 require './lib/parser'
 
@@ -15,6 +17,19 @@ module OKCMOA
 
     def client
       @client ||= Client.new
+    end
+
+    def update_films
+      current_screenings = Screening.current
+      recently_updated = current_screenings - Screening.last_import
+      recently_updated.each do |screening|
+        screening.create_event
+      end
+      Screening.write_last_import(current_screenings) unless recently_updated.empty?
+    end
+
+    def config
+      @config ||= self::Config.new
     end
 
   end

@@ -4,6 +4,7 @@ module OKCMOA
   class Client
 
     attr_reader :api_client
+    attr_reader :service
 
     def initialize
       connect

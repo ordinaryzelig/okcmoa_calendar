@@ -11,6 +11,7 @@ end
 group :test do
   gem 'fakeweb', '1.3.0'
   gem 'minitest', '3.2.0'
+  gem 'mocha', '0.12.0', require: false
   gem 'timecop', '0.3.5'
   gem 'vcr', '2.2.2'
 end

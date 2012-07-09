@@ -54,7 +54,7 @@ module OKCMOA
     end
 
     def screenings
-      @screenings ||= screening_times.map do |screening_time|
+      screening_times.map do |screening_time|
         Screening.new(
           film: self,
           time: screening_time,

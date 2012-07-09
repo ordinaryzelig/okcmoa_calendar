@@ -4,6 +4,8 @@ Bundler.require :default, :test
 require 'minitest/autorun'
 require 'minitest/pride'
 
+require 'mocha' # Require AFTER MiniTest.
+
 require './lib/okcmoa'
 
 Dir['./spec/support/**/*.rb'].each { |f| require f }
