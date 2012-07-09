@@ -1,6 +1,6 @@
 source :rubygems
 
-gem 'chronic', '0.6.7'
+gem 'google-api-client', '0.4.4', require: false
 gem 'nokogiri', '1.5.5'
 gem 'rake', '0.9.2.2'
 
