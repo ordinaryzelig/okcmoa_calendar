@@ -1,9 +1,14 @@
 module OKCMOA
-  module Screening
+  class Screening
+
+    include RailsStyleInitializer
+
+    attr_accessor :film
+    attr_accessor :time # DateTime.
 
     class << self
 
-      # Parse a line of screenings.
+      # Parse a line of screening times, return DateTime.
       # A line is defined as an li tag in the HTML.
       # A line can contain multiple dates and times.
       # If the date is in the past, assume that it is for the following year.

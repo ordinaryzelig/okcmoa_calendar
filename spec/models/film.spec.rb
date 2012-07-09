@@ -2,12 +2,13 @@ require 'spec_helper'
 
 describe OKCMOA::Film do
 
-  describe '.parse' do
+  let(:film) do
+    html = fixture_file_content('film.html')
+    OKCMOA::Film.parse(html)
+  end
+  subject { film }
 
-    subject do
-      html = fixture_file_content('film.html')
-      OKCMOA::Film.parse(html)
-    end
+  describe '.parse' do
 
     it_parses :title, 'First Position'
     it_parses :description, <<-END.chomp
@@ -16,9 +17,9 @@ Director: Bess Kargman 2011 USA 94min. NR 35mm
     END
     it_parses :video_url, 'http://www.youtube.com/embed/SmiBXdBNIXE?fs=1&feature=oembed'
 
-    it 'parses :screenings' do
+    it 'parses :screening_times' do
       Timecop.freeze(Date.civil(2012, 1, 1)) do
-        expected_screenings = [
+        expected_screening_times = [
           DateTime.civil(2012, 7, 5, 19, 30),
           DateTime.civil(2012, 7, 6, 17, 30),
           DateTime.civil(2012, 7, 6, 20, 00),
@@ -26,10 +27,40 @@ Director: Bess Kargman 2011 USA 94min. NR 35mm
           DateTime.civil(2012, 7, 7, 20, 00),
           DateTime.civil(2012, 7, 8, 14, 00),
         ]
-        subject.screenings.must_equal expected_screenings
+        subject.screening_times.must_equal expected_screening_times
       end
     end
 
+  end
+
+  specify '#screenings returns Screening objects with film and screening times' do
+    screenings = film.screenings
+    screenings.map(&:class).uniq.must_equal [OKCMOA::Screening]
+    screenings.map(&:time).must_equal film.screening_times
+    screenings.map(&:film).uniq.must_equal [film]
+  end
+
+  specify '.all crawls, parses, and returns Film objects' do
+    VCR.use_cassette 'films/first_position' do
+      urls = ['http://www.okcmoa.com/see/films/first-position/']
+      films = OKCMOA::Film.stub :urls, urls do
+        OKCMOA::Film.all
+      end
+
+      films.size.must_equal 1
+    end
+  end
+
+  specify ".screenings returns all films' screenings in order of time" do
+    films = 2.times.map do |idx|
+      OKCMOA::Film.new(
+        title: idx,
+        screening_times: 2.times.map { Date.civil(2012, 1, 30 - idx) },
+      )
+    end
+    OKCMOA::Film.stub :all, films do
+      OKCMOA::Film.screenings.must_equal films.flat_map(&:screenings).reverse
+    end
   end
 
 end
