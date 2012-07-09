@@ -48,7 +48,7 @@ module OKCMOA
       end
 
       def write_last_import(screenings)
-        File.open(last_import_path, 'w') do |f|
+        File.open(last_import_path, 'w+') do |f|
           f.write screenings.to_yaml
         end
       end
