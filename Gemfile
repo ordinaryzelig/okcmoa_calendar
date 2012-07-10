@@ -2,6 +2,7 @@ source :rubygems
 
 gem 'google-api-client', '0.4.4', require: false
 gem 'nokogiri', '1.5.5'
+gem 'psych', '1.3.3'
 gem 'rake', '0.9.2.2'
 gem 's3', '0.3.11'
 
