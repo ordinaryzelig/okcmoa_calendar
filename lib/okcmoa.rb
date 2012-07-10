@@ -7,6 +7,7 @@ require './lib/crawler'
 require './lib/parser'
 
 require './lib/client'
+require './lib/s3'
 
 Dir['./util/**/*.rb'].each { |f| require f }
 Dir['./lib/models/**/*.rb'].each { |f| require f }
@@ -17,6 +18,10 @@ module OKCMOA
 
     def client
       @client ||= Client.new
+    end
+
+    def s3
+      @s3 = self::S3.new
     end
 
     def update_films

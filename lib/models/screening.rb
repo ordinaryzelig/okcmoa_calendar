@@ -35,22 +35,25 @@ module OKCMOA
       end
 
       def last_import
-        if File.exist?(last_import_path)
-          file = File.open(last_import_path)
-          YAML.load(file.read)
-        else
-          []
-        end
-      end
-
-      def last_import_path
-        './tmp/screenings.yml'
+        YAML.load(s3_object.content)
       end
 
       def write_last_import(screenings)
-        File.open(last_import_path, 'w+') do |f|
-          f.write screenings.to_yaml
-        end
+        s3_object.content = screenings.to_yaml
+        s3_object.save
+      end
+
+    private
+
+      def s3_object_name
+        'screenings.yml'
+      end
+
+      def s3_object
+        return @s3_object if @s3_object
+        @s3_object = OKCMOA.s3.bucket.objects.find(s3_object_name)
+        @s3_object.content(true) # Need to reload when using #find.
+        @s3_object
       end
 
     end

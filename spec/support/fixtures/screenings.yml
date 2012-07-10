@@ -1,0 +1,26 @@
+---
+- !ruby/object:OKCMOA::Screening
+  film: !ruby/object:OKCMOA::Film
+    description: ! 'For this annual event we celebrate the vibrant cinema culture
+      of France during the week of La Fte Nationale. Copresented with the support
+      of the Cultural Offices of the French Embassy, the Consulate General of France
+      in Houston, Texas and LAlliance Franaise dOKC.
+
+      Daniel Auteuil stars as the eponymous well-digger Pascale, a widower living
+      with his six daughters in the Provence countryside at the start of World War
+      I. His eldest, Patricia (Astrid Bergs-Frisbey), has returned home from Paris
+      to help raise her sisters, and Pascale dreams of marrying her off to his loyal
+      assistant Felipe (Kad Merad). But when shes impregnated by a wealthy young pilot
+      (Nicolas Duvauchelle) who promptly abandons her for the frontlines, Pascale
+      is left to contend with the consequences. An exquisitely crafted, sun-drenched
+      melodrama, set to a score by Academy Award-nominee Alexandre Desplat, the film
+      captures all the warmth and humanist spirit of Pagnols original work. In French
+      with English subtitles.
+
+      Director: Daniel Auteuil 2011 France 105min. NR digital'
+    screening_times:
+    - !ruby/object:DateTime 2012-07-10 14:30:00.000000000 -05:00
+    title: ! '2012 French Cinema Week: The Well-Digger’s Daughter'
+    video_url: http://www.youtube.com/embed/0ECdeCJen9w?fs=1&feature=oembed
+  time: !ruby/object:DateTime 2012-07-10 14:30:00.000000000 -05:00
+

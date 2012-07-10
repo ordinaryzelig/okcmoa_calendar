@@ -1,0 +1,145 @@
+---
+http_interactions:
+- request:
+    method: head
+    uri: http://s3.amazonaws.com/OKCMOA_films_test/?
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      accept:
+      - ! '*/*'
+      user-agent:
+      - Ruby
+      date:
+      - Tue, 10 Jul 2012 04:07:52 GMT
+      authorization:
+      - AWS AKIAJP4UUOT5P47NIIWQ:5C9spml1ZfYzVuOW7rLT/tIO64Q=
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      x-amz-id-2:
+      - 0k+51q1bnjQAT98+av1BFjPphzOEXJQ4yIMELTVNnSr4nzQH8yBqanNx6518602B
+      x-amz-request-id:
+      - 3418CD9BD2E81FDE
+      date:
+      - Tue, 10 Jul 2012 04:07:54 GMT
+      content-type:
+      - application/xml
+      transfer-encoding:
+      - chunked
+      server:
+      - AmazonS3
+    body:
+      encoding: US-ASCII
+      string: ''
+    http_version: '1.1'
+  recorded_at: Tue, 10 Jul 2012 04:07:53 GMT
+- request:
+    method: head
+    uri: http://s3.amazonaws.com/OKCMOA_films_test/screenings.yml?
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      accept:
+      - ! '*/*'
+      user-agent:
+      - Ruby
+      date:
+      - Tue, 10 Jul 2012 04:07:53 GMT
+      authorization:
+      - AWS AKIAJP4UUOT5P47NIIWQ:UYCAf85L/Wk5aBoHDyY9+toJnPU=
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      x-amz-id-2:
+      - H2HWoBQLFab2cV3M5NVEvKqQpFeaf3oHAcun0IZnZXwGttIkyA5xEmRAxgD4Yh8C
+      x-amz-request-id:
+      - 57B24552C7C808E2
+      date:
+      - Tue, 10 Jul 2012 04:07:54 GMT
+      last-modified:
+      - Tue, 10 Jul 2012 03:25:02 GMT
+      etag:
+      - ! '"e820acc6e6d3812018a5d0d22cb0ac6e"'
+      accept-ranges:
+      - bytes
+      content-type:
+      - application/octet-stream
+      content-length:
+      - '1525'
+      server:
+      - AmazonS3
+    body:
+      encoding: US-ASCII
+      string: ''
+    http_version: '1.1'
+  recorded_at: Tue, 10 Jul 2012 04:07:53 GMT
+- request:
+    method: get
+    uri: http://s3.amazonaws.com/OKCMOA_films_test/screenings.yml?
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      accept:
+      - ! '*/*'
+      user-agent:
+      - Ruby
+      date:
+      - Tue, 10 Jul 2012 04:07:53 GMT
+      authorization:
+      - AWS AKIAJP4UUOT5P47NIIWQ:woOSh9Cw7EjaymLNddSvY1YlwtY=
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      x-amz-id-2:
+      - exXtJmScV4/UXeAx+y0H8ngttgUVaWgQ9sm3Kj7xW3H5ybVua8oXEKDPvuRHJtk7
+      x-amz-request-id:
+      - 97548B3AD2F6C686
+      date:
+      - Tue, 10 Jul 2012 04:07:54 GMT
+      last-modified:
+      - Tue, 10 Jul 2012 03:25:02 GMT
+      etag:
+      - ! '"e820acc6e6d3812018a5d0d22cb0ac6e"'
+      accept-ranges:
+      - bytes
+      content-type:
+      - application/octet-stream
+      content-length:
+      - '1525'
+      server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: ! "---\n- !ruby/object:OKCMOA::Screening\n  film: !ruby/object:OKCMOA::Film\n
+        \   description: ! 'For this annual event we celebrate the vibrant cinema
+        culture\n      of France during the week of La Fte Nationale. Copresented
+        with the support\n      of the Cultural Offices of the French Embassy, the
+        Consulate General of France\n      in Houston, Texas and LAlliance Franaise
+        dOKC.\n\n      Daniel Auteuil stars as the eponymous well-digger Pascale,
+        a widower living\n      with his six daughters in the Provence countryside
+        at the start of World War\n      I. His eldest, Patricia (Astrid Bergs-Frisbey),
+        has returned home from Paris\n      to help raise her sisters, and Pascale
+        dreams of marrying her off to his loyal\n      assistant Felipe (Kad Merad).
+        But when shes impregnated by a wealthy young pilot\n      (Nicolas Duvauchelle)
+        who promptly abandons her for the frontlines, Pascale\n      is left to contend
+        with the consequences. An exquisitely crafted, sun-drenched\n      melodrama,
+        set to a score by Academy Award-nominee Alexandre Desplat, the film\n      captures
+        all the warmth and humanist spirit of Pagnols original work. In French\n      with
+        English subtitles.\n\n      Director: Daniel Auteuil 2011 France 105min. NR
+        digital'\n    screening_times:\n    - !ruby/object:DateTime 2012-07-10 14:30:00.000000000
+        -05:00\n    title: ! '2012 French Cinema Week: The Well-Digger’s Daughter'\n
+        \   video_url: http://www.youtube.com/embed/0ECdeCJen9w?fs=1&feature=oembed\n
+        \ time: !ruby/object:DateTime 2012-07-10 14:30:00.000000000 -05:00\n\n"
+    http_version: '1.1'
+  recorded_at: Tue, 10 Jul 2012 04:07:53 GMT
+recorded_with: VCR 2.2.2

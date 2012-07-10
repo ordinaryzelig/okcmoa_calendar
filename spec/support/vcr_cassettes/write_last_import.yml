@@ -1,0 +1,220 @@
+---
+http_interactions:
+- request:
+    method: head
+    uri: http://s3.amazonaws.com/OKCMOA_films_test/?
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      accept:
+      - ! '*/*'
+      user-agent:
+      - Ruby
+      date:
+      - Tue, 10 Jul 2012 04:50:41 GMT
+      authorization:
+      - AWS AKIAJP4UUOT5P47NIIWQ:Auo9Mcnk9xKyNYhO7dOXdt5EH44=
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      x-amz-id-2:
+      - ZKkvdv7zIi0QqEPz3iV187CWGJe48JpnaGMw986TVYp7NLne2bzZXNd39MytLe+u
+      x-amz-request-id:
+      - 3DCB4E7F6CC0F216
+      date:
+      - Tue, 10 Jul 2012 04:50:43 GMT
+      content-type:
+      - application/xml
+      transfer-encoding:
+      - chunked
+      server:
+      - AmazonS3
+    body:
+      encoding: US-ASCII
+      string: ''
+    http_version: '1.1'
+  recorded_at: Tue, 10 Jul 2012 04:50:42 GMT
+- request:
+    method: head
+    uri: http://s3.amazonaws.com/OKCMOA_films_test/screenings.yml?
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      accept:
+      - ! '*/*'
+      user-agent:
+      - Ruby
+      date:
+      - Tue, 10 Jul 2012 04:50:42 GMT
+      authorization:
+      - AWS AKIAJP4UUOT5P47NIIWQ:LipKLY16Uranu5VVMVTq4W7N5JA=
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      x-amz-id-2:
+      - 2PKhkJJDwIpmzgO7wjCsmhXeqYvT8XGs9U8Qg/zWWYvcEY8O0mCesX0ChQWUjY41
+      x-amz-request-id:
+      - 30874ADEF0D8524C
+      date:
+      - Tue, 10 Jul 2012 04:50:43 GMT
+      last-modified:
+      - Tue, 10 Jul 2012 04:50:34 GMT
+      etag:
+      - ! '"912ec803b2ce49e4a541068d495ab570"'
+      accept-ranges:
+      - bytes
+      content-type:
+      - application/octet-stream
+      content-length:
+      - '4'
+      server:
+      - AmazonS3
+    body:
+      encoding: US-ASCII
+      string: ''
+    http_version: '1.1'
+  recorded_at: Tue, 10 Jul 2012 04:50:42 GMT
+- request:
+    method: get
+    uri: http://s3.amazonaws.com/OKCMOA_films_test/screenings.yml?
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      accept:
+      - ! '*/*'
+      user-agent:
+      - Ruby
+      date:
+      - Tue, 10 Jul 2012 04:50:42 GMT
+      authorization:
+      - AWS AKIAJP4UUOT5P47NIIWQ:SVrftqc6XOUiQyfbmts2k+iV4UY=
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      x-amz-id-2:
+      - /mqT+5Gqycv8SVFDK7wWkmNDrKtGU99J+5kJTCf6dSD40q2OobfRrIzvZxtUuyj3
+      x-amz-request-id:
+      - 0470EE59D0DB8583
+      date:
+      - Tue, 10 Jul 2012 04:50:43 GMT
+      last-modified:
+      - Tue, 10 Jul 2012 04:50:34 GMT
+      etag:
+      - ! '"912ec803b2ce49e4a541068d495ab570"'
+      accept-ranges:
+      - bytes
+      content-type:
+      - application/octet-stream
+      content-length:
+      - '4'
+      server:
+      - AmazonS3
+    body:
+      encoding: US-ASCII
+      string: asdf
+    http_version: '1.1'
+  recorded_at: Tue, 10 Jul 2012 04:50:42 GMT
+- request:
+    method: put
+    uri: http://s3.amazonaws.com/OKCMOA_films_test/screenings.yml?
+    body:
+      encoding: UTF-8
+      string: ! '--- []
+
+'
+    headers:
+      accept:
+      - ! '*/*'
+      user-agent:
+      - Ruby
+      x-amz-acl:
+      - public-read
+      x-amz-storage-class:
+      - STANDARD
+      content-type:
+      - application/octet-stream
+      content-length:
+      - '7'
+      date:
+      - Tue, 10 Jul 2012 04:50:42 GMT
+      content-md5:
+      - KrdqBsfbH0p+4CYVZHhNLg==
+      authorization:
+      - AWS AKIAJP4UUOT5P47NIIWQ:Bq9ibewLYM0cc1k2TTS6A5pgNvg=
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      x-amz-id-2:
+      - 1/Az3qwg0XumDObY4yE0xLXzcGoHuZ3b5XH/tafrfXFt0phD10FuLRxu3Cvr68Hf
+      x-amz-request-id:
+      - 95790B2FDB803D55
+      date:
+      - Tue, 10 Jul 2012 04:50:43 GMT
+      etag:
+      - ! '"2ab76a06c7db1f4a7ee0261564784d2e"'
+      content-length:
+      - '0'
+      server:
+      - AmazonS3
+    body:
+      encoding: US-ASCII
+      string: ''
+    http_version: '1.1'
+  recorded_at: Tue, 10 Jul 2012 04:50:42 GMT
+- request:
+    method: get
+    uri: http://s3.amazonaws.com/OKCMOA_films_test/screenings.yml?
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      accept:
+      - ! '*/*'
+      user-agent:
+      - Ruby
+      date:
+      - Tue, 10 Jul 2012 04:50:42 GMT
+      authorization:
+      - AWS AKIAJP4UUOT5P47NIIWQ:SVrftqc6XOUiQyfbmts2k+iV4UY=
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      x-amz-id-2:
+      - GPyjTBirL+ZnUkssp++VutEG/Ni/m6xltriu1TBBGK4Y4NK6iFq4+J24nlzRoV1K
+      x-amz-request-id:
+      - 65FEE26C5FC656E6
+      date:
+      - Tue, 10 Jul 2012 04:50:43 GMT
+      last-modified:
+      - Tue, 10 Jul 2012 04:50:43 GMT
+      etag:
+      - ! '"2ab76a06c7db1f4a7ee0261564784d2e"'
+      accept-ranges:
+      - bytes
+      content-type:
+      - application/octet-stream
+      content-length:
+      - '7'
+      server:
+      - AmazonS3
+    body:
+      encoding: US-ASCII
+      string: ! '--- []
+
+'
+    http_version: '1.1'
+  recorded_at: Tue, 10 Jul 2012 04:50:42 GMT
+recorded_with: VCR 2.2.2

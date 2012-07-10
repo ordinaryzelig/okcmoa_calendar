@@ -2,6 +2,12 @@ require 'spec_helper'
 
 describe OKCMOA::Screening do
 
+  include S3Helpers
+
+  before do
+    OKCMOA::Screening.instance_variable_set(:@s3_object, nil)
+  end
+
   let(:film) do
     OKCMOA::Film.new(
       title: 'asdf',
@@ -48,13 +54,15 @@ END
   end
 
   specify '#create_event creates event in Google calendar' do
-    skip "not sure how to test this"
-    screening = OKCMOA::Screening.new(
-      film: film,
-      time: DateTime.civil(2012, 7, 9, 19, 30),
-    )
-
-    screening.create_event
+    VCR.use_cassette 'create_screening_event' do
+      OKCMOA.config.films_calendar_id = 'dhnm84u5j5rk8bcu4hsbbocuvs@group.calendar.google.com'
+      screening = OKCMOA::Screening.new(
+        film: film,
+        time: DateTime.civil(2012, 7, 9, 19, 30),
+      )
+      screening.create_event
+      true.must_equal true # This seems to have created an event, so I'm going to assume it works.
+    end
   end
 
   specify '#quick_add_text' do
@@ -63,6 +71,23 @@ END
       time: DateTime.civil(2012, 7, 9, 19, 30),
     )
     screening.quick_add_text.must_equal 'asdf on 2012-07-09 19:30'
+  end
+
+  specify '.s3_object fetches object from S3' do
+    VCR.use_cassette 's3_screenings.yml' do
+      use_test_s3_credentials
+      object = OKCMOA::Screening.send :s3_object
+      object.content.must_equal fixture_file_content('screenings.yml')
+    end
+  end
+
+  specify '.write_last_import replaces S3 object with new one with current screenings' do
+    VCR.use_cassette 'write_last_import' do
+      use_test_s3_credentials
+      OKCMOA::Screening.write_last_import([])
+      s3_object = OKCMOA::Screening.send :s3_object
+      s3_object.content(true).must_equal "--- []\n"
+    end
   end
 
 end
