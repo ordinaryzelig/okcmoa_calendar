@@ -35,8 +35,9 @@ describe OKCMOA::Screening do
 
   it 'is uniquely identified by film title and time' do
     screening_1 = OKCMOA::Screening.new(
-      film: film,
-      time: DateTime.civil(2012, 7, 10, 19, 30),
+      film:       film,
+      time_start: DateTime.civil(2012, 7, 10, 19, 30),
+      time_end:   DateTime.civil(2012, 7, 10, 21, 00),
     )
     yaml = <<END
 --- !ruby/object:OKCMOA::Screening
@@ -44,7 +45,8 @@ film: !ruby/object:OKCMOA::Film
   title: asdf
   description: in a world...
   video_url: http://youtube.com/watch_this
-time: !ruby/object:DateTime 2012-07-10 14:30:00.000000000 -05:00    
+time_start: !ruby/object:DateTime 2012-07-10 14:30:00.000000000 -05:00    
+time_end: !ruby/object:DateTime 2012-07-10 16:00:00.000000000 -05:00    
 END
     screening_2 = YAML.load(yaml)
     screenings = [screening_1, screening_2]
@@ -54,21 +56,19 @@ END
   end
 
   specify '#create_event creates event in Google calendar' do
-    VCR.use_cassette 'create_screening_event' do
-      OKCMOA.config.films_calendar_id = 'dhnm84u5j5rk8bcu4hsbbocuvs@group.calendar.google.com'
-      screening = OKCMOA::Screening.new(
-        film: film,
-        time: DateTime.civil(2012, 7, 9, 19, 30),
-      )
-      screening.create_event
-      true.must_equal true # This seems to have created an event, so I'm going to assume it works.
-    end
+    screening = OKCMOA::Screening.new(
+      film:       film,
+      time_start: DateTime.civil(2012, 7, 9, 19, 30),
+      time_end:   DateTime.civil(2012, 7, 9, 21, 30),
+    )
+    OKCMOA::CalendarEvent.any_instance.expects(:create)
+    screening.create_event
   end
 
   specify '#quick_add_text' do
     screening = OKCMOA::Screening.new(
-      film: film,
-      time: DateTime.civil(2012, 7, 9, 19, 30),
+      film:       film,
+      time_start: DateTime.civil(2012, 7, 9, 19, 30),
     )
     screening.quick_add_text.must_equal 'asdf on 2012-07-09 19:30'
   end

@@ -4,7 +4,8 @@ module OKCMOA
     include RailsStyleInitializer
 
     attr_accessor :film
-    # time defined manuallyl because of stupid time zone crap.
+    # start_time defined manuallyl because of stupid time zone crap.
+    attr_accessor :end_time
 
     class << self
 
@@ -63,7 +64,9 @@ module OKCMOA
     # Compare film title and screening time.
 
     def ==(another_screening)
-      self.film.title == another_screening.film.title && self.time == another_screening.time
+      self.film.title == another_screening.film.title &&
+      self.time_start == another_screening.time_start &&
+      self.time_end   == another_screening.time_end
     end
     alias_method :eql?, :==
 
@@ -74,30 +77,40 @@ module OKCMOA
     # =============================================
     # UGH, time zones.
 
-    # Strip any time zone crap.
-    def time=(time)
-      t = time.to_time.utc
-      @time = DateTime.civil(t.year, t.month, t.day, t.hour, t.min)
+    # Define custom reader/writer for each time attribute.
+    [:time_start, :time_end].each do |time_attr|
+
+      define_method time_attr do
+        read_time(time_attr)
+      end
+
+      define_method :"#{time_attr}=" do |time|
+        assign_time time_attr, time
+      end
+
     end
 
-    def time
-      @time.to_time.utc.to_datetime
+    # Strip any time zone crap.
+    def assign_time(time_attr, time)
+      t = time.to_time.utc
+      adjusted_time = DateTime.civil(t.year, t.month, t.day, t.hour, t.min)
+      instance_variable_set :"@#{time_attr}", adjusted_time
+    end
+
+    # Convert to UTC and return DateTime.
+    def read_time(time_attr)
+      time = instance_variable_get :"@#{time_attr}"
+      time.to_time.utc.to_datetime
     end
 
     # =============================================
 
     def create_event
-      OKCMOA.client.api_client.execute(
-        api_method: OKCMOA.client.service.events.quick_add,
-        parameters: {
-          'calendarId' => OKCMOA.config.films_calendar_id,
-          'text'       => quick_add_text,
-        }
-      )
+      CalendarEvent.new_from_screening(self).create
     end
 
     def quick_add_text
-      "#{film.title} on #{time.strftime('%F %R')}"
+      "#{film.title} on #{time_start.strftime('%F %R')}"
     end
 
   end

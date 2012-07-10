@@ -22,32 +22,43 @@ http_interactions:
       code: 200
       message: OK
     headers:
-      cache-control:
-      - no-cache, no-store, max-age=0, must-revalidate
-      pragma:
-      - no-cache
-      expires:
-      - Fri, 01 Jan 1990 00:00:00 GMT
-      date:
-      - Tue, 10 Jul 2012 04:56:17 GMT
-      content-type:
-      - application/json
-      x-content-type-options:
-      - nosniff
-      x-frame-options:
-      - SAMEORIGIN
-      x-xss-protection:
-      - 1; mode=block
-      server:
-      - GSE
-      connection:
-      - close
+      !binary "Y2FjaGUtY29udHJvbA==":
+      - !binary |-
+        bm8tY2FjaGUsIG5vLXN0b3JlLCBtYXgtYWdlPTAsIG11c3QtcmV2YWxpZGF0
+        ZQ==
+      !binary "cHJhZ21h":
+      - !binary |-
+        bm8tY2FjaGU=
+      !binary "ZXhwaXJlcw==":
+      - !binary |-
+        RnJpLCAwMSBKYW4gMTk5MCAwMDowMDowMCBHTVQ=
+      !binary "ZGF0ZQ==":
+      - !binary |-
+        VHVlLCAxMCBKdWwgMjAxMiAxODoyMDoxOCBHTVQ=
+      !binary "Y29udGVudC10eXBl":
+      - !binary |-
+        YXBwbGljYXRpb24vanNvbg==
+      !binary "eC1jb250ZW50LXR5cGUtb3B0aW9ucw==":
+      - !binary |-
+        bm9zbmlmZg==
+      !binary "eC1mcmFtZS1vcHRpb25z":
+      - !binary |-
+        U0FNRU9SSUdJTg==
+      !binary "eC14c3MtcHJvdGVjdGlvbg==":
+      - !binary |-
+        MTsgbW9kZT1ibG9jaw==
+      !binary "c2VydmVy":
+      - !binary |-
+        R1NF
+      !binary "Y29ubmVjdGlvbg==":
+      - !binary |-
+        Y2xvc2U=
     body:
       encoding: US-ASCII
-      string: ! "{\n  \"access_token\" : \"ya29.AHES6ZQmWKVweOaJS8z9Fi9okj8k8b-Bwbd3reD46qbSgTYStg5WHCs\",\n
+      string: ! "{\n  \"access_token\" : \"ya29.AHES6ZTyEaUEhgUNwL_Mjwsf9LTtwpD_BNx8cO_9pq65O0k7b1M4T1c\",\n
         \ \"token_type\" : \"Bearer\",\n  \"expires_in\" : 3600\n}"
     http_version: '1.1'
-  recorded_at: Tue, 10 Jul 2012 04:56:17 GMT
+  recorded_at: Tue, 10 Jul 2012 18:20:18 GMT
 - request:
     method: get
     uri: https://www.googleapis.com/discovery/v1/apis/calendar/v3/rest
@@ -68,28 +79,38 @@ http_interactions:
       code: 200
       message: OK
     headers:
-      expires:
-      - Tue, 10 Jul 2012 05:00:12 GMT
-      date:
-      - Tue, 10 Jul 2012 04:55:12 GMT
-      etag:
-      - ! '"-SrYbbV8v3wJlx0CB1308kPKOHk/gqDG9zDKohlyyKHewkOPjKUU33c"'
-      content-type:
-      - application/json; charset=UTF-8
-      x-content-type-options:
-      - nosniff
-      x-frame-options:
-      - SAMEORIGIN
-      x-xss-protection:
-      - 1; mode=block
-      server:
-      - GSE
-      cache-control:
-      - public, max-age=300, must-revalidate, no-transform
-      age:
-      - '66'
-      connection:
-      - close
+      !binary "ZXhwaXJlcw==":
+      - !binary |-
+        VHVlLCAxMCBKdWwgMjAxMiAxODoyNToxOSBHTVQ=
+      !binary "ZGF0ZQ==":
+      - !binary |-
+        VHVlLCAxMCBKdWwgMjAxMiAxODoyMDoxOSBHTVQ=
+      !binary "Y2FjaGUtY29udHJvbA==":
+      - !binary |-
+        cHVibGljLCBtYXgtYWdlPTMwMCwgbXVzdC1yZXZhbGlkYXRlLCBuby10cmFu
+        c2Zvcm0=
+      !binary "ZXRhZw==":
+      - !binary |-
+        Ii1TclliYlY4djN3Smx4MENCMTMwOGtQS09Iay82R0tQM0lMRGJzLVJTeUd6
+        V0lsUUR1WnM5akUi
+      !binary "Y29udGVudC10eXBl":
+      - !binary |-
+        YXBwbGljYXRpb24vanNvbjsgY2hhcnNldD1VVEYtOA==
+      !binary "eC1jb250ZW50LXR5cGUtb3B0aW9ucw==":
+      - !binary |-
+        bm9zbmlmZg==
+      !binary "eC1mcmFtZS1vcHRpb25z":
+      - !binary |-
+        U0FNRU9SSUdJTg==
+      !binary "eC14c3MtcHJvdGVjdGlvbg==":
+      - !binary |-
+        MTsgbW9kZT1ibG9jaw==
+      !binary "c2VydmVy":
+      - !binary |-
+        R1NF
+      !binary "Y29ubmVjdGlvbg==":
+      - !binary |-
+        Y2xvc2U=
     body:
       encoding: US-ASCII
       string: ! "{\n \"kind\": \"discovery#restDescription\",\n \"discoveryVersion\":
@@ -957,22 +978,22 @@ http_interactions:
         \     \"https://www.googleapis.com/auth/calendar.readonly\"\n     ]\n    }\n
         \  }\n  }\n }\n}\n"
     http_version: '1.1'
-  recorded_at: Tue, 10 Jul 2012 04:56:18 GMT
+  recorded_at: Tue, 10 Jul 2012 18:20:20 GMT
 - request:
     method: post
-    uri: https://www.googleapis.com/calendar/v3/calendars/dhnm84u5j5rk8bcu4hsbbocuvs@group.calendar.google.com/events/quickAdd?text=asdf%20on%202012-07-09%2019%3A30
+    uri: https://www.googleapis.com/calendar/v3/calendars/dhnm84u5j5rk8bcu4hsbbocuvs@group.calendar.google.com/events
     body:
-      encoding: US-ASCII
-      string: ''
+      encoding: UTF-8
+      string: ! '{"summary":"asdf","start":{"dateTime":"2012-07-10T12:00:00.000-05:00"},"end":{"dateTime":"2012-07-10T13:30:00.000-05:00"},"description":"wow"}'
     headers:
       user-agent:
       - google-api-ruby-client/0.4.4 Mac OS X/10.7.4
+      content-type:
+      - application/json
       authorization:
-      - Bearer ya29.AHES6ZQmWKVweOaJS8z9Fi9okj8k8b-Bwbd3reD46qbSgTYStg5WHCs
+      - Bearer ya29.AHES6ZTyEaUEhgUNwL_Mjwsf9LTtwpD_BNx8cO_9pq65O0k7b1M4T1c
       cache-control:
       - no-store
-      content-type:
-      - application/x-www-form-urlencoded
       accept:
       - ! '*/*'
       connection:
@@ -982,40 +1003,53 @@ http_interactions:
       code: 200
       message: OK
     headers:
-      cache-control:
-      - no-cache, no-store, max-age=0, must-revalidate
-      pragma:
-      - no-cache
-      expires:
-      - Fri, 01 Jan 1990 00:00:00 GMT
-      date:
-      - Tue, 10 Jul 2012 04:56:19 GMT
-      etag:
-      - ! '"nsotaZquo6DO0eiMpm6h-oAUaCQ/Q0xqNi12bUdKeEVBQUFBQUFBQUFBQT09"'
-      content-type:
-      - application/json; charset=UTF-8
-      x-content-type-options:
-      - nosniff
-      x-frame-options:
-      - SAMEORIGIN
-      x-xss-protection:
-      - 1; mode=block
-      server:
-      - GSE
-      connection:
-      - close
+      !binary "Y2FjaGUtY29udHJvbA==":
+      - !binary |-
+        bm8tY2FjaGUsIG5vLXN0b3JlLCBtYXgtYWdlPTAsIG11c3QtcmV2YWxpZGF0
+        ZQ==
+      !binary "cHJhZ21h":
+      - !binary |-
+        bm8tY2FjaGU=
+      !binary "ZXhwaXJlcw==":
+      - !binary |-
+        RnJpLCAwMSBKYW4gMTk5MCAwMDowMDowMCBHTVQ=
+      !binary "ZGF0ZQ==":
+      - !binary |-
+        VHVlLCAxMCBKdWwgMjAxMiAxODoyMDoyMSBHTVQ=
+      !binary "ZXRhZw==":
+      - !binary |-
+        Im5zb3RhWnF1bzZETzBlaU1wbTZoLW9BVWFDUS9RMGxwTVMwMVEwaEtlRVZC
+        UVVGQlFVRkJRVUZCUVQwOSI=
+      !binary "Y29udGVudC10eXBl":
+      - !binary |-
+        YXBwbGljYXRpb24vanNvbjsgY2hhcnNldD1VVEYtOA==
+      !binary "eC1jb250ZW50LXR5cGUtb3B0aW9ucw==":
+      - !binary |-
+        bm9zbmlmZg==
+      !binary "eC1mcmFtZS1vcHRpb25z":
+      - !binary |-
+        U0FNRU9SSUdJTg==
+      !binary "eC14c3MtcHJvdGVjdGlvbg==":
+      - !binary |-
+        MTsgbW9kZT1ibG9jaw==
+      !binary "c2VydmVy":
+      - !binary |-
+        R1NF
+      !binary "Y29ubmVjdGlvbg==":
+      - !binary |-
+        Y2xvc2U=
     body:
       encoding: US-ASCII
-      string: ! "{\n \"kind\": \"calendar#event\",\n \"etag\": \"\\\"nsotaZquo6DO0eiMpm6h-oAUaCQ/Q0xqNi12bUdKeEVBQUFBQUFBQUFBQT09\\\"\",\n
-        \"id\": \"8mof7qct2r8a9uk731j4v6q5gc\",\n \"status\": \"confirmed\",\n \"htmlLink\":
-        \"https://www.google.com/calendar/event?eid=OG1vZjdxY3QycjhhOXVrNzMxajR2NnE1Z2MgZGhubTg0dTVqNXJrOGJjdTRoc2Jib2N1dnNAZw\",\n
-        \"created\": \"2012-07-10T04:56:19.000Z\",\n \"updated\": \"2012-07-10T04:56:19.000Z\",\n
-        \"summary\": \"asdf\",\n \"creator\": {\n  \"email\": \"okcmoa_calendar@redningja.com\"\n
-        },\n \"organizer\": {\n  \"email\": \"dhnm84u5j5rk8bcu4hsbbocuvs@group.calendar.google.com\",\n
+      string: ! "{\n \"kind\": \"calendar#event\",\n \"etag\": \"\\\"nsotaZquo6DO0eiMpm6h-oAUaCQ/Q0lpMS01Q0hKeEVBQUFBQUFBQUFBQT09\\\"\",\n
+        \"id\": \"mt18d58qegtj36qh1nm171uq2o\",\n \"status\": \"confirmed\",\n \"htmlLink\":
+        \"https://www.google.com/calendar/event?eid=bXQxOGQ1OHFlZ3RqMzZxaDFubTE3MXVxMm8gZGhubTg0dTVqNXJrOGJjdTRoc2Jib2N1dnNAZw\",\n
+        \"created\": \"2012-07-10T18:20:20.000Z\",\n \"updated\": \"2012-07-10T18:20:21.000Z\",\n
+        \"summary\": \"asdf\",\n \"description\": \"wow\",\n \"creator\": {\n  \"email\":
+        \"okcmoa_calendar@redningja.com\"\n },\n \"organizer\": {\n  \"email\": \"dhnm84u5j5rk8bcu4hsbbocuvs@group.calendar.google.com\",\n
         \ \"displayName\": \"films_dev\",\n  \"self\": true\n },\n \"start\": {\n
-        \ \"dateTime\": \"2012-07-09T19:30:00-05:00\"\n },\n \"end\": {\n  \"dateTime\":
-        \"2012-07-09T20:30:00-05:00\"\n },\n \"iCalUID\": \"8mof7qct2r8a9uk731j4v6q5gc@google.com\",\n
+        \ \"dateTime\": \"2012-07-10T12:00:00-05:00\"\n },\n \"end\": {\n  \"dateTime\":
+        \"2012-07-10T13:30:00-05:00\"\n },\n \"iCalUID\": \"mt18d58qegtj36qh1nm171uq2o@google.com\",\n
         \"sequence\": 0,\n \"reminders\": {\n  \"useDefault\": true\n }\n}\n"
     http_version: '1.1'
-  recorded_at: Tue, 10 Jul 2012 04:56:19 GMT
+  recorded_at: Tue, 10 Jul 2012 18:20:21 GMT
 recorded_with: VCR 2.2.2
