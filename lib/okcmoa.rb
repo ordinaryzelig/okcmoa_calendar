@@ -27,6 +27,7 @@ module OKCMOA
     def update_films
       current_screenings = Screening.current
       recently_updated = current_screenings - Screening.last_import
+      OKCMOA.puts "recent screenings: #{recently_updated.size}"
       recently_updated.each do |screening|
         screening.create_event
       end

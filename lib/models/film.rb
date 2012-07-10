@@ -16,6 +16,7 @@ module OKCMOA
       #   parse HTML into Film object.
       def all
         urls.map do |url|
+          OKCMOA.puts url
           html = open(url).read
           film = parse(html)
         end
@@ -47,6 +48,7 @@ module OKCMOA
     private
 
       def urls
+        OKCMOA.puts 'get URLs'
         html = Crawler.crawl_event_list(:films)
         Parser.parse_event_links(html)
       end

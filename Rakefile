@@ -9,6 +9,7 @@ end
 
 task :init do
   require './lib/okcmoa'
+  OKCMOA.config.verbose = true
 end
 
 desc 'Add new screenings'
