@@ -14,5 +14,15 @@ end
 
 desc 'Add new screenings'
 task :update_films => :init do
-  OKCMOA.update_films
+  mail_on_error do
+    OKCMOA.update_films
+  end
+end
+
+def mail_on_error
+  begin
+    yield
+  rescue Exception => ex
+    OKCMOA::Mailer.mail_exception(ex)
+  end
 end

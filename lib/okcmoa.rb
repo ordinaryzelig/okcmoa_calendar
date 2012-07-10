@@ -2,6 +2,7 @@ require 'bundler/setup'
 Bundler.require
 
 require './lib/config'
+require './lib/mailer'
 
 require './lib/crawler'
 require './lib/parser'
