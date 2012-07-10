@@ -35,7 +35,7 @@ module OKCMOA
 
         video_url       = doc.at_css('iframe')[:src]
         description     = Description.parse(doc.css('.post-content'))
-        description    += "\nVideo: #{video_url}" if video_url
+        description    += "\n\nVideo: #{video_url}" if video_url
         screening_times = Screening.parse_list(doc.at_css('.post-content ul'))
         title           = doc.at_css('h1').text
         runtime    = parse_runtime(description)

@@ -29,7 +29,7 @@ module OKCMOA
           content.gsub(/^"|"$/, '')
         end
 
-        paragraphs.compact.join("\n")
+        paragraphs.compact.join("\n\n")
       end
 
     end
