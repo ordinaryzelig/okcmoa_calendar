@@ -68,4 +68,8 @@ Video: http://www.youtube.com/embed/SmiBXdBNIXE?fs=1&feature=oembed
     end
   end
 
+  specify '.parse raises ParseError if exception raised' do
+    proc { OKCMOA::Film.parse('') }.must_raise OKCMOA::Film::ParseError
+  end
+
 end
