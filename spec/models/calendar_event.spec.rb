@@ -3,7 +3,7 @@ require 'spec_helper'
 describe OKCMOA::CalendarEvent do
 
   let(:film) do
-    OKCMOA::Film.new(title: 'asdf', description: 'wow', runtime: 90)
+    OKCMOA::Film.new(title: 'asdf', description: 'wow', runtime: 90, okcmoa_url: 'okcmoa.com')
   end
   let(:screening) do
     OKCMOA::Screening.new(
@@ -19,14 +19,14 @@ describe OKCMOA::CalendarEvent do
     subject { event }
 
     it_parses :summary,     'asdf'
-    it_parses :description, 'wow'
+    it_parses :description, "okcmoa.com\n\nwow"
     it_parses :start,       '2012-07-10T12:00:00.000-05:00'
     it_parses :end,         '2012-07-10T13:30:00.000-05:00'
 
   end
 
   specify '#body_json conmposes a hash and converts to JSON' do
-    event.send(:body_json).must_equal '{"summary":"asdf","start":{"dateTime":"2012-07-10T12:00:00.000-05:00"},"end":{"dateTime":"2012-07-10T13:30:00.000-05:00"},"description":"wow"}'
+    event.send(:body_json).must_equal '{"summary":"asdf","start":{"dateTime":"2012-07-10T12:00:00.000-05:00"},"end":{"dateTime":"2012-07-10T13:30:00.000-05:00"},"description":"okcmoa.com\n\nwow"}'
   end
 
   specify '#create sends a request to Google and creates the event' do

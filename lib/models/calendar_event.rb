@@ -11,11 +11,13 @@ module OKCMOA
     class << self
 
       def new_from_screening(screening)
+        film = screening.film
+        description = "#{film.okcmoa_url}\n\n#{film.description}"
         new(
-          summary: screening.film.title,
-          description: screening.film.description,
-          start:       google_time_str(screening.time_start),
-          end:         google_time_str(screening.time_end),
+          summary:      screening.film.title,
+          description:  description,
+          start:        google_time_str(screening.time_start),
+          end:          google_time_str(screening.time_end),
         )
       end
 

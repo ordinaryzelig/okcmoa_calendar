@@ -3,9 +3,10 @@ module OKCMOA
 
     attr_accessor :description
     attr_accessor :screening_times
+    attr_accessor :runtime
     attr_accessor :title
     attr_accessor :video_url
-    attr_accessor :runtime
+    attr_accessor :okcmoa_url
 
     include RailsStyleInitializer
 
@@ -20,6 +21,8 @@ module OKCMOA
           OKCMOA.puts url
           html = open(url).read
           film = parse(html)
+          film.okcmoa_url = url
+          film
         end
       end
 
