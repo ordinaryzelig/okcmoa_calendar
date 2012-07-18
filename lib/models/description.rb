@@ -25,11 +25,20 @@ module OKCMOA
           contains_videos = node.css('iframe').any?
           next if contains_videos
 
+          convert_urls!(node)
+
           content = Iconv.iconv('utf-8//IGNORE', 'ascii', node.content).first
           content.gsub(/^"|"$/, '')
         end
 
         paragraphs.compact.join("\n\n")
+      end
+
+      def convert_urls!(node)
+        node.css('a').each do |a_tag|
+          a_tag.content = "#{a_tag.content} (#{a_tag[:href]})"
+        end
+        node
       end
 
     end

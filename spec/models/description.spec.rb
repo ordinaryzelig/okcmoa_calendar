@@ -13,4 +13,11 @@ Director: Bess Kargman 2011 USA 94min. NR 35mm
     description.must_equal expected_description
   end
 
+  specify '#convert_urls! converts anchor tags into plain text with link URL' do
+    html = '<a href="example.com">link</a>'
+    doc = Nokogiri.HTML(html)
+    OKCMOA::Description.convert_urls!(doc)
+    doc.content.must_equal 'link (example.com)'
+  end
+
 end
