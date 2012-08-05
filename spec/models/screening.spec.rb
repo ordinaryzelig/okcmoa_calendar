@@ -90,4 +90,9 @@ END
     end
   end
 
+  it 'defaults #time_end to 1 hour after time_start' do
+    screening = OKCMOA::Screening.new(time_start: DateTime.civil(2012, 8, 5, 8, 25))
+    screening.time_end.must_equal DateTime.civil(2012, 8, 5, 9, 25)
+  end
+
 end

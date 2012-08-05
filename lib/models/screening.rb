@@ -4,8 +4,17 @@ module OKCMOA
     include RailsStyleInitializer
 
     attr_accessor :film
-    # start_time defined manuallyl because of stupid time zone crap.
-    attr_accessor :end_time
+    # time_start, time_end defined manually because of time zone stuff.
+
+    def initialize(atts = {})
+      super
+      # Default time_end to 1 hour after time_start.
+      ts = self.time_start
+      self.time_end ||=
+        ts ?
+        DateTime.new(ts.year, ts.month, ts.day, ts.hour + 1, ts.minute) : # 1 hour later.
+        nil
+    end
 
     class << self
 
@@ -100,7 +109,7 @@ module OKCMOA
     # Convert to UTC and return DateTime.
     def read_time(time_attr)
       time = instance_variable_get :"@#{time_attr}"
-      time.to_time.utc.to_datetime
+      time.to_time.utc.to_datetime if time
     end
 
     # =============================================

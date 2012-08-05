@@ -76,11 +76,13 @@ module OKCMOA
 
     def screenings
       screening_times.map do |screening_time|
-        Screening.new(
-          film: self,
-          time_start: screening_time,
-          time_end:   screening_time + (runtime / 60.0 / 24.0),
-        )
+        atts = {}
+
+        atts[:film]       = self
+        atts[:time_start] = screening_time
+        atts[:time_end]   = screening_time + (runtime / 60.0 / 24.0) if runtime
+
+        Screening.new(atts)
       end
     end
 
