@@ -19,11 +19,15 @@ module OKCMOA
       def all
         urls.map do |url|
           OKCMOA.puts url
-          html = open(url).read
-          film = parse(html)
-          film.okcmoa_url = url
-          film
+          new_from_url(url)
         end
+      end
+
+      def new_from_url(url)
+        html = open(url).read
+        film = parse(html)
+        film.okcmoa_url = url
+        film
       end
 
       def screenings
