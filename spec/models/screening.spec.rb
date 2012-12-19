@@ -24,7 +24,8 @@ describe OKCMOA::Screening do
     DateTime.civil(2012, 7, 7, 20, 00),
   ]
   it_parses_screening_line 'Sunday, July 8, 2pm',  [DateTime.civil(2012, 7, 8, 14, 00)]
-  it_parses_screening_line 'Tuesday, July 3, 2pm', [DateTime.civil(2013, 7, 3, 14, 00)]
+  it_parses_screening_line 'Tuesday, July 3, 2pm', [DateTime.civil(2012, 7, 3, 14, 00)]
+  it_parses_screening_line 'Monday, Jan 3, 2pm',   [DateTime.civil(2013, 1, 3, 14, 00)]
 
   specify '.parse_list parses ul tag and returns screening dates' do
     doc = node_from_fixture_file('film.html')

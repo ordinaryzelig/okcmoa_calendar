@@ -21,14 +21,15 @@ module OKCMOA
       # Parse a line of screening times, return DateTime.
       # A line is defined as an li tag in the HTML.
       # A line can contain multiple dates and times.
-      # If the date is in the past, assume that it is for the following year.
+      # If the date is more than 90 days past, assume that it is for the following year.
       def parse_line(line)
         days_of_week, dates, times = line.split(', ')
         month, days = dates.split
         days.split('-').flat_map do |day|
           times.split(' & ').map do |time|
             date = Date.parse("#{month} #{day}")
-            year = date < Date.today ? date.year + 1 : date.year
+            more_than_3_months_in_past = (Date.today - date).to_i > 90
+            year = more_than_3_months_in_past ? date.year + 1 : date.year
             DateTime.parse("#{year} #{month} #{day} #{time}")
           end
         end
