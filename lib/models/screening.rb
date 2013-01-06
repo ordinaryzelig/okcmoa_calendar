@@ -35,10 +35,12 @@ module OKCMOA
         end
       end
 
-      def parse_list(ul_node)
-        ul_node.css('li').flat_map do |li|
-          parse_line(li.text)
-        end
+      def parse_list(list_node)
+        list_node.css('p').flat_map do |li|
+          line_text = li.text
+          next nil unless contains_screening_data?(line_text)
+          parse_line(line_text)
+        end.compact
       end
 
       def current
@@ -52,6 +54,18 @@ module OKCMOA
       def write_last_import(screenings)
         s3_object.content = screenings.to_yaml
         s3_object.save
+      end
+
+      def contains_screening_data?(text)
+        starts_with_day_of_week = text =~ /^(
+          monday|
+          tuesday|
+          wednesday|
+          thursday|
+          friday|
+          saturday|
+          sunday
+        )/ix
       end
 
     private

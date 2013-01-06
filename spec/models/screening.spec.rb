@@ -1,4 +1,4 @@
-require 'spec_helper'
+require_relative '../spec_helper'
 
 describe OKCMOA::Screening do
 
@@ -27,10 +27,10 @@ describe OKCMOA::Screening do
   it_parses_screening_line 'Tuesday, July 3, 2pm', [DateTime.civil(2012, 7, 3, 14, 00)]
   it_parses_screening_line 'Monday, Jan 3, 2pm',   [DateTime.civil(2013, 1, 3, 14, 00)]
 
-  specify '.parse_list parses ul tag and returns screening dates' do
+  specify '.parse_list parses nodes and returns screening dates' do
     doc = node_from_fixture_file('film.html')
-    ul_node = doc.at_css('.post-content ul')
-    dates = OKCMOA::Screening.parse_list(ul_node)
+    list = doc.at_css('.post-content')
+    dates = OKCMOA::Screening.parse_list(list)
     dates.size.must_equal 6
   end
 

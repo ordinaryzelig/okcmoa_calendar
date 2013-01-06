@@ -3,7 +3,6 @@ module OKCMOA
 
     class << self
 
-      # Post content div contains paragraph tags with description and other information.
       # The description will include the general description and
       # the film's information:
       #   director
@@ -13,9 +12,10 @@ module OKCMOA
       #   rating
       #   film format
       #
-      # Sometimes there is a paratraph before the screenings.
+      # Sometimes there is a paragraph before the screenings.
       # Include it if it exists and is not empty.
       #
+      # Exclude the screening paragraphs.
       # Exclude the last paragraph which contains the video(s).
       def parse(post_content_node)
         paragraph_nodes = post_content_node.children.select { |node| node.name == 'p' }
@@ -24,6 +24,7 @@ module OKCMOA
           next if blank
           contains_videos = node.css('iframe').any?
           next if contains_videos
+          next if Screening.contains_screening_data?(node.text)
 
           convert_urls!(node)
 

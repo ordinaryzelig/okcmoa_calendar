@@ -42,9 +42,9 @@ module OKCMOA
 
         title           = doc.at_css('h1').text
         video_url       = parse_video_url(doc)
-        description     = Description.parse(doc.css('.post-content'))
+        description     = Description.parse(doc.at_css('.post-content'))
         description    += "\n\nVideo: #{video_url}" if video_url
-        screening_times = Screening.parse_list(doc.at_css('.post-content ul'))
+        screening_times = Screening.parse_list(doc.at_css('.post-content'))
         runtime         = parse_runtime(description)
 
         new(
