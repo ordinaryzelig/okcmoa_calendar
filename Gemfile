@@ -7,10 +7,6 @@ gem 'psych', '1.3.3'
 gem 'rake', '0.9.2.2'
 gem 's3', '0.3.11'
 
-group :development do
-  gem 'heroku', '2.28.8'
-end
-
 group :test do
   gem 'fakeweb', '1.3.0'
   gem 'minitest', '3.2.0'
