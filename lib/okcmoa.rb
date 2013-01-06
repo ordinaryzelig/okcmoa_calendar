@@ -22,21 +22,24 @@ module OKCMOA
     end
 
     def s3
-      @s3 = self::S3.new
+      @s3 ||= self::S3.new
     end
 
     def update_films
       current_screenings = Screening.current
+
       recently_updated = current_screenings - Screening.last_import
       OKCMOA.puts "recent screenings: #{recently_updated.size}"
+
       recently_updated.each do |screening|
         begin
+          OKCMOA.puts "creating event: '#{screening.film.title}'"
           screening.create_event
-        rescue Exception => ex
-          OKCMOA.puts "Error creating event for '#{screening.film.title}'"
-          raise
+        rescue
+          raise $!
         end
       end
+
       Screening.write_last_import(current_screenings) unless recently_updated.empty?
     end
 
