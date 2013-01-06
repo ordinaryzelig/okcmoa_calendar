@@ -12,34 +12,41 @@ http_interactions:
       user-agent:
       - Ruby
       date:
-      - Tue, 10 Jul 2012 04:50:41 GMT
+      - Sun, 06 Jan 2013 22:24:06 GMT
       authorization:
-      - AWS AKIAJP4UUOT5P47NIIWQ:Auo9Mcnk9xKyNYhO7dOXdt5EH44=
+      - AWS AKIAJP4UUOT5P47NIIWQ:7vDWdeBgLJI+PfI2L5LwB+dg/ZM=
   response:
     status:
       code: 200
       message: OK
     headers:
-      x-amz-id-2:
-      - ZKkvdv7zIi0QqEPz3iV187CWGJe48JpnaGMw986TVYp7NLne2bzZXNd39MytLe+u
-      x-amz-request-id:
-      - 3DCB4E7F6CC0F216
-      date:
-      - Tue, 10 Jul 2012 04:50:43 GMT
-      content-type:
-      - application/xml
-      transfer-encoding:
-      - chunked
-      server:
-      - AmazonS3
+      !binary "eC1hbXotaWQtMg==":
+      - !binary |-
+        WjNkQTRjNG1DM09VcEIwbmlVQXRWdDVvU1FteDJJTUxlUzNEaHU0czJacHZq
+        UmkybzhPVzlmR0dVTWVNYjJrSA==
+      !binary "eC1hbXotcmVxdWVzdC1pZA==":
+      - !binary |-
+        RDA4RDgxM0M5NDY2RDQzOA==
+      !binary "ZGF0ZQ==":
+      - !binary |-
+        U3VuLCAwNiBKYW4gMjAxMyAyMjoyNDowOCBHTVQ=
+      !binary "Y29udGVudC10eXBl":
+      - !binary |-
+        YXBwbGljYXRpb24veG1s
+      !binary "dHJhbnNmZXItZW5jb2Rpbmc=":
+      - !binary |-
+        Y2h1bmtlZA==
+      !binary "c2VydmVy":
+      - !binary |-
+        QW1hem9uUzM=
     body:
       encoding: US-ASCII
       string: ''
     http_version: '1.1'
-  recorded_at: Tue, 10 Jul 2012 04:50:42 GMT
+  recorded_at: Sun, 06 Jan 2013 22:24:07 GMT
 - request:
     method: head
-    uri: http://s3.amazonaws.com/OKCMOA_films_test/screenings.yml?
+    uri: http://s3.amazonaws.com/OKCMOA_films_test/screenings.json?
     body:
       encoding: US-ASCII
       string: ''
@@ -49,40 +56,50 @@ http_interactions:
       user-agent:
       - Ruby
       date:
-      - Tue, 10 Jul 2012 04:50:42 GMT
+      - Sun, 06 Jan 2013 22:24:07 GMT
       authorization:
-      - AWS AKIAJP4UUOT5P47NIIWQ:LipKLY16Uranu5VVMVTq4W7N5JA=
+      - AWS AKIAJP4UUOT5P47NIIWQ:NweK2fP+bfi7Sk87XXqG8PFz2Ik=
   response:
     status:
       code: 200
       message: OK
     headers:
-      x-amz-id-2:
-      - 2PKhkJJDwIpmzgO7wjCsmhXeqYvT8XGs9U8Qg/zWWYvcEY8O0mCesX0ChQWUjY41
-      x-amz-request-id:
-      - 30874ADEF0D8524C
-      date:
-      - Tue, 10 Jul 2012 04:50:43 GMT
-      last-modified:
-      - Tue, 10 Jul 2012 04:50:34 GMT
-      etag:
-      - ! '"912ec803b2ce49e4a541068d495ab570"'
-      accept-ranges:
-      - bytes
-      content-type:
-      - application/octet-stream
-      content-length:
-      - '4'
-      server:
-      - AmazonS3
+      !binary "eC1hbXotaWQtMg==":
+      - !binary |-
+        QkpBN0hxVm10Z2p2cUJEMkdFNVcrSXNZKzFLcElkTDJZVVBZMkNRa252Tm1U
+        UEJBN05OVlc2QzdudjEyOXlvbg==
+      !binary "eC1hbXotcmVxdWVzdC1pZA==":
+      - !binary |-
+        RjBFNTU5NDk4OTEwOUU4Ng==
+      !binary "ZGF0ZQ==":
+      - !binary |-
+        U3VuLCAwNiBKYW4gMjAxMyAyMjoyNDowOCBHTVQ=
+      !binary "bGFzdC1tb2RpZmllZA==":
+      - !binary |-
+        U3VuLCAwNiBKYW4gMjAxMyAyMjoxNjowMCBHTVQ=
+      !binary "ZXRhZw==":
+      - !binary |-
+        Ijg2NjdkMjk5ODE1YjlmZDI5Zjg0YWUwM2U5OTA2MTlmIg==
+      !binary "YWNjZXB0LXJhbmdlcw==":
+      - !binary |-
+        Ynl0ZXM=
+      !binary "Y29udGVudC10eXBl":
+      - !binary |-
+        YXBwbGljYXRpb24vb2N0ZXQtc3RyZWFt
+      !binary "Y29udGVudC1sZW5ndGg=":
+      - !binary |-
+        OTg=
+      !binary "c2VydmVy":
+      - !binary |-
+        QW1hem9uUzM=
     body:
       encoding: US-ASCII
       string: ''
     http_version: '1.1'
-  recorded_at: Tue, 10 Jul 2012 04:50:42 GMT
+  recorded_at: Sun, 06 Jan 2013 22:24:07 GMT
 - request:
     method: get
-    uri: http://s3.amazonaws.com/OKCMOA_films_test/screenings.yml?
+    uri: http://s3.amazonaws.com/OKCMOA_films_test/screenings.json?
     body:
       encoding: US-ASCII
       string: ''
@@ -92,45 +109,54 @@ http_interactions:
       user-agent:
       - Ruby
       date:
-      - Tue, 10 Jul 2012 04:50:42 GMT
+      - Sun, 06 Jan 2013 22:24:07 GMT
       authorization:
-      - AWS AKIAJP4UUOT5P47NIIWQ:SVrftqc6XOUiQyfbmts2k+iV4UY=
+      - AWS AKIAJP4UUOT5P47NIIWQ:UjCmiVSPk9lctWkzMSwl8lj9JPE=
   response:
     status:
       code: 200
       message: OK
     headers:
-      x-amz-id-2:
-      - /mqT+5Gqycv8SVFDK7wWkmNDrKtGU99J+5kJTCf6dSD40q2OobfRrIzvZxtUuyj3
-      x-amz-request-id:
-      - 0470EE59D0DB8583
-      date:
-      - Tue, 10 Jul 2012 04:50:43 GMT
-      last-modified:
-      - Tue, 10 Jul 2012 04:50:34 GMT
-      etag:
-      - ! '"912ec803b2ce49e4a541068d495ab570"'
-      accept-ranges:
-      - bytes
-      content-type:
-      - application/octet-stream
-      content-length:
-      - '4'
-      server:
-      - AmazonS3
+      !binary "eC1hbXotaWQtMg==":
+      - !binary |-
+        L01YTkN0OGpCV2dUUisvRHVWM3lxODdJWDd4TEVmV1VSa01VV1pPaGxHWE94
+        WVNVK0N5S3JZaHFxNVY0bXBTaQ==
+      !binary "eC1hbXotcmVxdWVzdC1pZA==":
+      - !binary |-
+        MkI0MDhFQjE4MDUzREJDMQ==
+      !binary "ZGF0ZQ==":
+      - !binary |-
+        U3VuLCAwNiBKYW4gMjAxMyAyMjoyNDowOSBHTVQ=
+      !binary "bGFzdC1tb2RpZmllZA==":
+      - !binary |-
+        U3VuLCAwNiBKYW4gMjAxMyAyMjoxNjowMCBHTVQ=
+      !binary "ZXRhZw==":
+      - !binary |-
+        Ijg2NjdkMjk5ODE1YjlmZDI5Zjg0YWUwM2U5OTA2MTlmIg==
+      !binary "YWNjZXB0LXJhbmdlcw==":
+      - !binary |-
+        Ynl0ZXM=
+      !binary "Y29udGVudC10eXBl":
+      - !binary |-
+        YXBwbGljYXRpb24vb2N0ZXQtc3RyZWFt
+      !binary "Y29udGVudC1sZW5ndGg=":
+      - !binary |-
+        OTg=
+      !binary "c2VydmVy":
+      - !binary |-
+        QW1hem9uUzM=
     body:
       encoding: US-ASCII
-      string: asdf
+      string: ! '[{"title":"asdf","time_start":"2012-01-01T00:00:00+00:00","time_end":"2012-01-01T01:00:00+00:00"}]'
     http_version: '1.1'
-  recorded_at: Tue, 10 Jul 2012 04:50:42 GMT
+  recorded_at: Sun, 06 Jan 2013 22:24:08 GMT
 - request:
     method: put
-    uri: http://s3.amazonaws.com/OKCMOA_films_test/screenings.yml?
+    uri: http://s3.amazonaws.com/OKCMOA_films_test/screenings.json?
     body:
       encoding: UTF-8
-      string: ! '--- []
-
-'
+      string: ! "[\n  {\n    \"title\": \"asdf\",\n    \"time_start\": \"2012-01-01T00:00:00+00:00\",\n
+        \   \"time_end\": \"2012-01-01T01:00:00+00:00\"\n  }\n]"
     headers:
       accept:
       - ! '*/*'
@@ -141,40 +167,48 @@ http_interactions:
       x-amz-storage-class:
       - STANDARD
       content-type:
-      - application/octet-stream
+      - !binary |-
+        YXBwbGljYXRpb24vb2N0ZXQtc3RyZWFt
       content-length:
-      - '7'
+      - '123'
       date:
-      - Tue, 10 Jul 2012 04:50:42 GMT
+      - Sun, 06 Jan 2013 22:24:08 GMT
       content-md5:
-      - KrdqBsfbH0p+4CYVZHhNLg==
+      - A6+XMZ/SqbHtH8gf4/H+bw==
       authorization:
-      - AWS AKIAJP4UUOT5P47NIIWQ:Bq9ibewLYM0cc1k2TTS6A5pgNvg=
+      - AWS AKIAJP4UUOT5P47NIIWQ:AIafYLlrC5ApOwSdLwEGVcsOfIY=
   response:
     status:
       code: 200
       message: OK
     headers:
-      x-amz-id-2:
-      - 1/Az3qwg0XumDObY4yE0xLXzcGoHuZ3b5XH/tafrfXFt0phD10FuLRxu3Cvr68Hf
-      x-amz-request-id:
-      - 95790B2FDB803D55
-      date:
-      - Tue, 10 Jul 2012 04:50:43 GMT
-      etag:
-      - ! '"2ab76a06c7db1f4a7ee0261564784d2e"'
-      content-length:
-      - '0'
-      server:
-      - AmazonS3
+      !binary "eC1hbXotaWQtMg==":
+      - !binary |-
+        ME85aUsxL1puMnhrdEJCbXR3bk1Ea0hrYlFia0NZQk8yK3F2Q0thRGQ4eUpQ
+        Y2dtcFlBSW5WVzlTZVlCNGg1bg==
+      !binary "eC1hbXotcmVxdWVzdC1pZA==":
+      - !binary |-
+        QjFDNEJFNDYyRTlFN0Y0MQ==
+      !binary "ZGF0ZQ==":
+      - !binary |-
+        U3VuLCAwNiBKYW4gMjAxMyAyMjoyNDowOSBHTVQ=
+      !binary "ZXRhZw==":
+      - !binary |-
+        IjAzYWY5NzMxOWZkMmE5YjFlZDFmYzgxZmUzZjFmZTZmIg==
+      !binary "Y29udGVudC1sZW5ndGg=":
+      - !binary |-
+        MA==
+      !binary "c2VydmVy":
+      - !binary |-
+        QW1hem9uUzM=
     body:
       encoding: US-ASCII
       string: ''
     http_version: '1.1'
-  recorded_at: Tue, 10 Jul 2012 04:50:42 GMT
+  recorded_at: Sun, 06 Jan 2013 22:24:08 GMT
 - request:
     method: get
-    uri: http://s3.amazonaws.com/OKCMOA_films_test/screenings.yml?
+    uri: http://s3.amazonaws.com/OKCMOA_films_test/screenings.json?
     body:
       encoding: US-ASCII
       string: ''
@@ -184,37 +218,46 @@ http_interactions:
       user-agent:
       - Ruby
       date:
-      - Tue, 10 Jul 2012 04:50:42 GMT
+      - Sun, 06 Jan 2013 22:24:08 GMT
       authorization:
-      - AWS AKIAJP4UUOT5P47NIIWQ:SVrftqc6XOUiQyfbmts2k+iV4UY=
+      - AWS AKIAJP4UUOT5P47NIIWQ:rYZtUILsMvfsFPFLFPt8Wh8FRcE=
   response:
     status:
       code: 200
       message: OK
     headers:
-      x-amz-id-2:
-      - GPyjTBirL+ZnUkssp++VutEG/Ni/m6xltriu1TBBGK4Y4NK6iFq4+J24nlzRoV1K
-      x-amz-request-id:
-      - 65FEE26C5FC656E6
-      date:
-      - Tue, 10 Jul 2012 04:50:43 GMT
-      last-modified:
-      - Tue, 10 Jul 2012 04:50:43 GMT
-      etag:
-      - ! '"2ab76a06c7db1f4a7ee0261564784d2e"'
-      accept-ranges:
-      - bytes
-      content-type:
-      - application/octet-stream
-      content-length:
-      - '7'
-      server:
-      - AmazonS3
+      !binary "eC1hbXotaWQtMg==":
+      - !binary |-
+        bS8wRUxHZmhVd01nelpnNkc0T2hHRU1JWWNYOGR6Q0U5NUxpSm53MURqLzUz
+        VnBDT0Urei9SWkVvaE51ei8yTw==
+      !binary "eC1hbXotcmVxdWVzdC1pZA==":
+      - !binary |-
+        NEM5NzE3Qjc3RUVDMzRBQQ==
+      !binary "ZGF0ZQ==":
+      - !binary |-
+        U3VuLCAwNiBKYW4gMjAxMyAyMjoyNDowOSBHTVQ=
+      !binary "bGFzdC1tb2RpZmllZA==":
+      - !binary |-
+        U3VuLCAwNiBKYW4gMjAxMyAyMjoyNDowOSBHTVQ=
+      !binary "ZXRhZw==":
+      - !binary |-
+        IjAzYWY5NzMxOWZkMmE5YjFlZDFmYzgxZmUzZjFmZTZmIg==
+      !binary "YWNjZXB0LXJhbmdlcw==":
+      - !binary |-
+        Ynl0ZXM=
+      !binary "Y29udGVudC10eXBl":
+      - !binary |-
+        YXBwbGljYXRpb24vb2N0ZXQtc3RyZWFt
+      !binary "Y29udGVudC1sZW5ndGg=":
+      - !binary |-
+        MTIz
+      !binary "c2VydmVy":
+      - !binary |-
+        QW1hem9uUzM=
     body:
       encoding: US-ASCII
-      string: ! '--- []
-
-'
+      string: ! "[\n  {\n    \"title\": \"asdf\",\n    \"time_start\": \"2012-01-01T00:00:00+00:00\",\n
+        \   \"time_end\": \"2012-01-01T01:00:00+00:00\"\n  }\n]"
     http_version: '1.1'
-  recorded_at: Tue, 10 Jul 2012 04:50:42 GMT
+  recorded_at: Sun, 06 Jan 2013 22:24:08 GMT
 recorded_with: VCR 2.2.2

@@ -74,26 +74,56 @@ END
     screening.quick_add_text.must_equal 'asdf on 2012-07-09 19:30'
   end
 
-  specify '.s3_object fetches object from S3' do
-    VCR.use_cassette 's3_screenings.yml' do
+  specify '.write_last_import replaces S3 object with new one with current screenings' do
+    VCR.use_cassette 'write_last_import' do
+      screening = OKCMOA::Screening.new(
+        film: film,
+        time_start: DateTime.civil(2012, 1, 1)
+      )
+      screenings = [screening]
+
       use_test_s3_credentials
-      object = OKCMOA::Screening.send :s3_object
-      object.content.must_equal fixture_file_content('screenings.yml')
+      OKCMOA::Screening.write_last_import(screenings)
+      s3_object = OKCMOA::Screening.send :s3_object
+      json = JSON.pretty_generate(screenings)
+      s3_object.content(true).must_equal json
     end
   end
 
-  specify '.write_last_import replaces S3 object with new one with current screenings' do
-    VCR.use_cassette 'write_last_import' do
-      use_test_s3_credentials
-      OKCMOA::Screening.write_last_import([])
-      s3_object = OKCMOA::Screening.send :s3_object
-      s3_object.content(true).must_equal "--- []\n"
-    end
+  specify '.last_import returns screenings from last import' do
+    json = fixture_file_content('screenings.json')
+    OKCMOA::Screening.stubs(:s3_object_content).returns(json)
+
+    screenings = OKCMOA::Screening.last_import
+
+    screenings.size.must_equal 1
+    screening = screenings.first
+
+    screening.film.title.must_equal 'asdf'
+    screening.time_start.must_equal DateTime.civil(2013, 1, 6, 16, 16)
+    screening.time_end.must_equal   DateTime.civil(2013, 1, 6, 17, 16)
   end
 
   it 'defaults #time_end to 1 hour after time_start' do
     screening = OKCMOA::Screening.new(time_start: DateTime.civil(2012, 8, 5, 8, 25))
     screening.time_end.must_equal DateTime.civil(2012, 8, 5, 9, 25)
+  end
+
+  specify '#to_json returns a string of attributes' do
+    time_start = DateTime.civil(2013, 1, 6, 16, 16)
+    screening = OKCMOA::Screening.new(
+      film:        film,
+      time_start:  time_start,
+    )
+
+    json = JSON.pretty_generate(screening)
+    json.must_equal <<-END.chomp
+{
+  "title": "asdf",
+  "time_start": "2013-01-06T16:16:00+00:00",
+  "time_end": "2013-01-06T17:16:00+00:00"
+}
+    END
   end
 
 end

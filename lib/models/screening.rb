@@ -3,6 +3,8 @@ module OKCMOA
 
     include RailsStyleInitializer
 
+    SCREENINGS_FILE_NAME = 'screenings.json'
+
     attr_accessor :film
     # time_start, time_end defined manually because of time zone stuff.
 
@@ -48,11 +50,18 @@ module OKCMOA
       end
 
       def last_import
-        YAML.load(s3_object.content)
+        screenings_atts = JSON.parse(s3_object_content)
+        screenings_atts.map do |atts|
+          new(
+            film:       Film.new(title: atts.fetch('title')),
+            time_start: DateTime.parse(atts.fetch('time_start')),
+            time_end:   DateTime.parse(atts.fetch('time_end')),
+          )
+        end
       end
 
       def write_last_import(screenings)
-        s3_object.content = screenings.to_yaml
+        s3_object.content = JSON.pretty_generate(screenings)
         s3_object.save
       end
 
@@ -70,15 +79,15 @@ module OKCMOA
 
     private
 
-      def s3_object_name
-        'screenings.yml'
-      end
-
       def s3_object
         return @s3_object if @s3_object
-        @s3_object = OKCMOA.s3.bucket.objects.find(s3_object_name)
+        @s3_object = OKCMOA.s3.bucket.objects.find(SCREENINGS_FILE_NAME)
         @s3_object.content(true) # Need to reload when using #find.
         @s3_object
+      end
+
+      def s3_object_content
+        s3_object.content
       end
 
     end
@@ -135,6 +144,14 @@ module OKCMOA
 
     def quick_add_text
       "#{film.title} on #{time_start.strftime('%F %R')}"
+    end
+
+    def to_json(*args)
+      {
+        title:       film.title,
+        time_start:  time_start,
+        time_end:    time_end,
+      }.to_json(*args)
     end
 
   end
