@@ -30,7 +30,12 @@ module OKCMOA
       recently_updated = current_screenings - Screening.last_import
       OKCMOA.puts "recent screenings: #{recently_updated.size}"
       recently_updated.each do |screening|
-        screening.create_event
+        begin
+          screening.create_event
+        rescue Exception => ex
+          OKCMOA.puts "Error creating event for '#{screening.film.title}'"
+          raise
+        end
       end
       Screening.write_last_import(current_screenings) unless recently_updated.empty?
     end

@@ -23,6 +23,7 @@ def mail_on_error
   begin
     yield
   rescue Exception => ex
+    puts ex.inspect
     OKCMOA::Mailer.mail_exception(ex)
   end
 end
