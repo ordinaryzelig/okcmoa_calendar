@@ -26,7 +26,11 @@ module OKCMOA
       # Force use of Google's time format they used in the Ruby example.
       # Also, use CST time zone (-05:00).
       def google_time_str(time)
-        time.strftime('%FT%R:00.000-05:00')
+        hour_offset =
+          Time.now.
+          strftime('%z').
+          insert(-3, ':')
+        time.strftime("%FT%R:00.000#{hour_offset}")
       end
 
     end

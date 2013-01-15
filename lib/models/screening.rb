@@ -7,6 +7,8 @@ module OKCMOA
 
     attr_accessor :film
     # time_start, time_end defined manually because of time zone stuff.
+    # attr_accessor :time_start
+    # attr_accessor :time_end
 
     def initialize(atts = {})
       super

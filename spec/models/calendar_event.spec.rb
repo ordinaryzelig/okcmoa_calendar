@@ -20,13 +20,25 @@ describe OKCMOA::CalendarEvent do
 
     it_parses :summary,     'asdf'
     it_parses :description, "okcmoa.com\n\nwow"
-    it_parses :start,       '2012-07-10T12:00:00.000-05:00'
-    it_parses :end,         '2012-07-10T13:30:00.000-05:00'
+
+    it 'parses "start"' do
+      Timecop.freeze DateTime.civil(2012, 7, 10) do
+        subject.start.must_equal '2012-07-10T12:00:00.000-05:00'
+      end
+    end
+
+    it 'parses "end"' do
+      Timecop.freeze DateTime.civil(2012, 7, 10) do
+        subject.end.must_equal '2012-07-10T13:30:00.000-05:00'
+      end
+    end
 
   end
 
   specify '#body_json conmposes a hash and converts to JSON' do
-    event.send(:body_json).must_equal '{"summary":"asdf","start":{"dateTime":"2012-07-10T12:00:00.000-05:00"},"end":{"dateTime":"2012-07-10T13:30:00.000-05:00"},"description":"okcmoa.com\n\nwow"}'
+    Timecop.freeze DateTime.civil(2012, 7, 10) do
+      event.send(:body_json).must_equal '{"summary":"asdf","start":{"dateTime":"2012-07-10T12:00:00.000-05:00"},"end":{"dateTime":"2012-07-10T13:30:00.000-05:00"},"description":"okcmoa.com\n\nwow"}'
+    end
   end
 
   specify '#create sends a request to Google and creates the event' do
