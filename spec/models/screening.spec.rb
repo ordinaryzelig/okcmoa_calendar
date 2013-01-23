@@ -1,3 +1,5 @@
+# encoding: UTF-8
+
 require_relative '../spec_helper'
 
 describe OKCMOA::Screening do
@@ -26,6 +28,11 @@ describe OKCMOA::Screening do
   it_parses_screening_line 'Sunday, July 8, 2pm',  [DateTime.civil(2012, 7, 8, 14, 00)]
   it_parses_screening_line 'Tuesday, July 3, 2pm', [DateTime.civil(2012, 7, 3, 14, 00)]
   it_parses_screening_line 'Monday, Jan 3, 2pm',   [DateTime.civil(2013, 1, 3, 14, 00)]
+  it_parses_screening_line 'Tuesday – Thursday, February 5-7, 7:30pm', [
+    DateTime.civil(2013, 2, 5, 19, 30),
+    DateTime.civil(2013, 2, 6, 19, 30),
+    DateTime.civil(2013, 2, 7, 19, 30),
+  ]
 
   specify '.parse_list parses nodes and returns screening dates' do
     doc = node_from_fixture_file('film.html')

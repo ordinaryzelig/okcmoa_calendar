@@ -29,18 +29,25 @@ module OKCMOA
       def parse_line(line)
         days_of_week, dates, times = line.split(', ')
         month, days = dates.split
-        days.split('-').flat_map do |day|
-          times.split(' & ').map do |time|
+
+        day_start, day_end = days.split('-')
+        day_end ||= day_start
+        day_range = (day_start..day_end)
+
+        day_range.flat_map do |day|
+          times.split(/\s*&\s*/).map do |time|
             date = Date.parse("#{month} #{day}")
+
             more_than_3_months_in_past = (Date.today - date).to_i > 90
             year = more_than_3_months_in_past ? date.year + 1 : date.year
+
             DateTime.parse("#{year} #{month} #{day} #{time}")
           end
         end
       end
 
       def parse_list(list_node)
-        list_node.css('p').flat_map do |li|
+        list_node.css('ul li').flat_map do |li|
           line_text = li.text
           next nil unless contains_screening_data?(line_text)
           parse_line(line_text)
