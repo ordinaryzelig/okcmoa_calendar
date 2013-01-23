@@ -93,7 +93,7 @@ module OKCMOA
     class ParseError < StandardError
       def initialize(title, orig_exception)
         super "Error parsing '#{title}': #{orig_exception.message}"
-        set_backtrace = orig_exception.backtrace
+        set_backtrace orig_exception.backtrace
       end
     end
 
