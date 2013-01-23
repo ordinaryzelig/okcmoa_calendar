@@ -72,4 +72,9 @@ Video: http://www.youtube.com/embed/SmiBXdBNIXE?fs=1&feature=oembed
     proc { OKCMOA::Film.parse('') }.must_raise OKCMOA::Film::ParseError
   end
 
+  it 'raises error if no screenings' do
+    film = OKCMOA::Film.new
+    proc { film.validate! }.must_raise OKCMOA::Film::MissingScreenings
+  end
+
 end

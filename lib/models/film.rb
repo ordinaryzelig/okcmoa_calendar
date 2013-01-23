@@ -10,6 +10,11 @@ module OKCMOA
 
     include RailsStyleInitializer
 
+    def initialize(atts = {})
+      super
+      @screening_times ||= []
+    end
+
     class << self
 
       # Crawl films list.
@@ -47,13 +52,16 @@ module OKCMOA
         screening_times = Screening.parse_list(doc.at_css('.post-content'))
         runtime         = parse_runtime(description)
 
-        new(
+        film = new(
           description:      description,
           screening_times:  screening_times,
           title:            title,
           video_url:        video_url,
           runtime:          runtime,
         )
+        film.validate!
+
+        film
       rescue Exception => ex
         raise ParseError.new(title, ex)
       end
@@ -78,6 +86,9 @@ module OKCMOA
 
     end
 
+    ##################
+    # Instance methods
+
     def screenings
       screening_times.map do |screening_time|
         atts = {}
@@ -90,10 +101,23 @@ module OKCMOA
       end
     end
 
+    def validate!
+      raise MissingScreenings if screenings.empty?
+    end
+
+    ############
+    # Exceptions
+
     class ParseError < StandardError
       def initialize(title, orig_exception)
         super "Error parsing '#{title}': #{orig_exception.message}"
         set_backtrace orig_exception.backtrace
+      end
+    end
+
+    class MissingScreenings < StandardError
+      def initialize
+        super 'Missing screenings'
       end
     end
 
