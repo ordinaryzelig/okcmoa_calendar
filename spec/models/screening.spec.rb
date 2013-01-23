@@ -18,6 +18,9 @@ describe OKCMOA::Screening do
     )
   end
 
+  ##########################
+  # Time frozen at 2012-7-4.
+
   it_parses_screening_line 'Thursday, July 5, 7:30pm', [DateTime.civil(2012, 7, 5, 19, 30)]
   it_parses_screening_line 'Friday & Saturday, July 6-7, 5:30pm & 8pm', [
     DateTime.civil(2012, 7, 6, 17, 30),
@@ -32,6 +35,10 @@ describe OKCMOA::Screening do
     DateTime.civil(2013, 2, 5, 19, 30),
     DateTime.civil(2013, 2, 6, 19, 30),
     DateTime.civil(2013, 2, 7, 19, 30),
+  ]
+  it_parses_screening_line 'Friday & Saturday, February, 1-2, 8pm', [
+    DateTime.civil(2013, 2, 1, 20, 00),
+    DateTime.civil(2013, 2, 2, 20, 00),
   ]
 
   specify '.parse_list parses nodes and returns screening dates' do

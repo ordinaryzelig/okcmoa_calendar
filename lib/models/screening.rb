@@ -27,8 +27,7 @@ module OKCMOA
       # A line can contain multiple dates and times.
       # If the date is more than 90 days past, assume that it is for the following year.
       def parse_line(line)
-        days_of_week, dates, times = line.split(', ')
-        month, days = dates.split
+        month, days, times = screening_match_data(line)
 
         day_start, day_end = days.split('-')
         day_end ||= day_start
@@ -47,7 +46,9 @@ module OKCMOA
       end
 
       def parse_list(list_node)
-        list_node.css('ul li').flat_map do |li|
+        ul_list = list_node.css('ul li')
+        p_list  = list_node.css('p')
+        (ul_list + p_list).flat_map do |li|
           line_text = li.text
           next nil unless contains_screening_data?(line_text)
           parse_line(line_text)
@@ -75,15 +76,23 @@ module OKCMOA
       end
 
       def contains_screening_data?(text)
-        starts_with_day_of_week = text =~ /^(
-          monday|
-          tuesday|
-          wednesday|
-          thursday|
-          friday|
-          saturday|
-          sunday
-        )/ix
+        screening_match_data(text).all?
+      end
+
+      def screening_match_data(text)
+        %r{
+          (?<month>(jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)\w*)
+          \W*
+          (?<days>(\d+-?)+)
+          \W*
+          (?<times>(\d+:?\d*pm\s*&?\s*)+)
+        }xi =~ text
+
+        #ap month
+        #ap days
+        #ap times
+
+        [month, days, times]
       end
 
     private
