@@ -33,7 +33,7 @@ module OKCMOA
 
       recently_updated.each do |screening|
         begin
-          OKCMOA.puts "creating event: '#{screening.film.title}'"
+          OKCMOA.puts "creating event: '#{screening.film.title} @ #{screening.time_start}'"
           screening.create_event
         rescue
           raise $!

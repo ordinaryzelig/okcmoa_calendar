@@ -24,13 +24,11 @@ module OKCMOA
     private
 
       # Force use of Google's time format they used in the Ruby example.
-      # Also, use CST time zone (-05:00).
       def google_time_str(time)
-        hour_offset =
-          Time.now.
-          strftime('%z').
-          insert(-3, ':')
-        time.strftime("%FT%R:00.000#{hour_offset}")
+        timezone = Time.now.zone
+        zone_offset = Time.zone_offset(timezone) / 60 / 60
+        zone_digit = zone_offset.to_s[/\d/]
+        time.strftime("%FT%R:00.000-0#{zone_digit}:00")
       end
 
     end
