@@ -41,6 +41,12 @@ describe OKCMOA::Screening do
     DateTime.civil(2013, 2, 2, 20, 00),
   ]
   it_parses_screening_line '<a></a>Thursday, Feb. 28, 7:30 p.m.', [DateTime.new(2013, 2, 28, 19, 30)]
+  it_parses_screening_line 'Friday & Saturday, March 1 & 2, 5:30 & 8:30 p.m.', [
+    DateTime.new(2013, 3, 1, 17, 30),
+    DateTime.new(2013, 3, 1, 20, 30),
+    DateTime.new(2013, 3, 2, 17, 30),
+    DateTime.new(2013, 3, 2, 20, 30),
+  ]
 
   ##########################
 

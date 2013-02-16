@@ -28,7 +28,7 @@ module OKCMOA
       def parse_line(line)
         month, days, times = screening_match_data(line)
 
-        day_start, day_end = days.split('-')
+        day_start, day_end = days.split(/\s*[-&]\s*/)
         day_end ||= day_start
         day_range = (day_start..day_end)
 
@@ -39,7 +39,10 @@ module OKCMOA
             more_than_3_months_in_past = (Date.today - date).to_i > 90
             year = more_than_3_months_in_past ? date.year + 1 : date.year
 
-            DateTime.parse("#{year} #{month} #{day} #{time}")
+            # Strip pm if there is one, add it manually.
+            time_without_am_pm = time[/[\d:]+/]
+
+            DateTime.parse("#{year} #{month} #{day} #{time_without_am_pm}pm")
           end
         end
       end
@@ -82,9 +85,9 @@ module OKCMOA
         %r{
           (?<month>(jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)\w*)
           \W*
-          (?<days>(\d+-?)+)
+          (?<days>(\d+\s*[-&]?\s*)+)
           \W*
-          (?<times>(\d+:?\d*\s*[ap]\.?m\.?\s*&?\s*)+) (?# am/pm/a.m./p.m.)
+          (?<times>(\d+:?\d*\s*([ap]\.?m\.?)?\s*&?\s*)+) (?# am/pm/a.m./p.m.)
         }xi =~ text
 
         #ap month
