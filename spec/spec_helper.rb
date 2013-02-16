@@ -1,3 +1,5 @@
+ENV['TZ'] = 'America/Chicago'
+
 require 'bundler/setup'
 Bundler.require :default, :test
 

@@ -40,6 +40,9 @@ describe OKCMOA::Screening do
     DateTime.civil(2013, 2, 1, 20, 00),
     DateTime.civil(2013, 2, 2, 20, 00),
   ]
+  it_parses_screening_line '<a></a>Thursday, Feb. 28, 7:30 p.m.', [DateTime.new(2013, 2, 28, 19, 30)]
+
+  ##########################
 
   specify '.parse_list parses nodes and returns screening dates' do
     doc = node_from_fixture_file('film.html')

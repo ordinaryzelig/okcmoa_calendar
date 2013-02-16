@@ -23,7 +23,6 @@ module OKCMOA
     class << self
 
       # Parse a line of screening times, return DateTime.
-      # A line is defined as an li tag in the HTML.
       # A line can contain multiple dates and times.
       # If the date is more than 90 days past, assume that it is for the following year.
       def parse_line(line)
@@ -85,7 +84,7 @@ module OKCMOA
           \W*
           (?<days>(\d+-?)+)
           \W*
-          (?<times>(\d+:?\d*pm\s*&?\s*)+)
+          (?<times>(\d+:?\d*\s*[ap]\.?m\.?\s*&?\s*)+) (?# am/pm/a.m./p.m.)
         }xi =~ text
 
         #ap month
