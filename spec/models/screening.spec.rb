@@ -48,6 +48,8 @@ describe OKCMOA::Screening do
     DateTime.new(2013, 3, 2, 20, 30),
   ]
 
+  it_wont_parse_line_as_screening 'Director: Rupert Julian 1925 USA 93min. G 35mm'
+
   ##########################
 
   specify '.parse_list parses nodes and returns screening dates' do

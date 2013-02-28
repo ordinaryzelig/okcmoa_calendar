@@ -42,7 +42,8 @@ module OKCMOA
             # Strip pm if there is one, add it manually.
             time_without_am_pm = time[/[\d:]+/]
 
-            DateTime.parse("#{year} #{month} #{day} #{time_without_am_pm}pm")
+            datetime = DateTime.parse("#{year} #{month} #{day} #{time_without_am_pm}pm")
+            datetime
           end
         end
       end
@@ -78,6 +79,7 @@ module OKCMOA
       end
 
       def contains_screening_data?(text)
+        text !~ /Dir/ &&
         screening_match_data(text).all?
       end
 
