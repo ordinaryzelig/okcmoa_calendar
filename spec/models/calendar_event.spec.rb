@@ -1,4 +1,4 @@
-require 'spec_helper'
+require_relative '../spec_helper'
 
 describe OKCMOA::CalendarEvent do
 
@@ -49,5 +49,13 @@ describe OKCMOA::CalendarEvent do
       true.must_equal true
     end
   end
+
+  ##########################
+  # Time frozen at 2012-7-4.
+
+  it_converts_to_google_time DateTime.new(2013, 1, 1), '2013-01-01T00:00:00.000-06:00'
+  it_converts_to_google_time DateTime.new(2013, 4, 1), '2013-04-01T00:00:00.000-05:00'
+
+  ##########################
 
 end

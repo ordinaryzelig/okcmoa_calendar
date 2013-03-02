@@ -21,6 +21,12 @@ module Macros
     end
   end
 
+  def it_converts_to_google_time(time, expected_google_time)
+    it "converts #{time.inspect} to google time #{expected_google_time.inspect}" do
+      OKCMOA::CalendarEvent.send(:google_time_str, time).must_equal expected_google_time
+    end
+  end
+
 end
 
 MiniTest::Spec.extend Macros

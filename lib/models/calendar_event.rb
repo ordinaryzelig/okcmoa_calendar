@@ -25,7 +25,7 @@ module OKCMOA
 
       # Force use of Google's time format they used in the Ruby example.
       def google_time_str(time)
-        timezone = Time.now.zone
+        timezone = time.to_time.localtime.zone
         zone_offset = Time.zone_offset(timezone) / 60 / 60
         zone_digit = zone_offset.to_s[/\d/]
         time.strftime("%FT%R:00.000-0#{zone_digit}:00")
